@@ -3,13 +3,18 @@ layout: /layouts/main/landing.njk
 title: Home
 ---
 
+<div class="rss-header">
+  <h2>Changelog</h2>
+  <a href="/changelog.xml" target="_blank"><i class="fa-solid fa-rss fa-2xl"></i></a>
+</div>
+{% include "blocks/status-box.njk" %}
 <h2>Heyo!</h2>
 <p>
   Hi, I’m Hika (they/them)! A black, queer, comic artist, graphic designer, and web designer based in the San Francisco Bay Area! I graduated with a BA in Graphic Design and have professional work experience in both graphic design and front-end web development.
 </p>
 <p>I love magical girls, the supernatural, manga, anime, video games, and my OCs.</p>
 <p>
-  The internet’s very scattered right now, so this is where I’ll keep all the Hika-essentials. For starters, you can peep my <a href="https://hikatamika.com/art-gallery/"><b>Art</b></a> or <b><a href="https://hikatamika.com/design-gallery/">Design Galleries</a></b> to see some of my visual work, the <a href="https://hikatamika.com/library/"> <b>Library</b> </a> for my comics and zines, or head to the <a href="https://hikatamika.com/cinema/"> <b>Cinema</b> </a> for my art discussion and tutorial videos.
+  The internet’s very scattered right now, so this is where I’ll keep all the Hika-essentials. For starters, you can peep my <a href="https://hikatamika.com/art-gallery/"><b>Art</b></a> or <b><a href="https://hikatamika.com/design-gallery/">Design Galleries</a></b> to see some of my visual work, the <a href="https://hikatamika.com/library/"> <b>Library</b></a> for my comics and zines, or head to the <a href="https://hikatamika.com/cinema/"> <b>Cinema</b> </a> for my art discussion and tutorial videos.
 </p>
 <p>
   My <a href="https://hikatamika.com/my-links/"><b>My Links</b></a> page is the one with my pages on all the social media apps you love to use, but my <a href="https://hikatamika.com/links-out/"><b>Links Out</b></a> page is a huge list of useful creative resources and other artists’ websites.
@@ -17,9 +22,9 @@ title: Home
 <hr class="hr-33">
 <div class="sitebuttons sitebuttons-center">
   {% for button in webButtons8831 %}
-  {% if buttonCateg == home %}
-    {% include "blocks/button-roll.njk" %}
-  {% endif %}
+    {% if buttonCateg == home %}
+      {% include "blocks/button-roll.njk" %}
+    {% endif %}
   {% endfor %}
 </div>
 <hr class="hr-33">
