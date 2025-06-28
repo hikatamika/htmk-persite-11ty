@@ -151,32 +151,6 @@
     "lvl1Item": "rss",
     "lvl1Label": "RSS",
     "lvl1Link": "/#",
-    "hasLvl2Items": true,
-    "lvl2Items": [
-      {
-        "lvl2Item": "All",
-        "lvl2Label": "All",
-        "lvl2Link": "/#",
-        "hasLvl3Items": false
-      },
-      {
-        "lvl2Item": "art",
-        "lvl2Label": "Art",
-        "lvl2Link": "/#",
-        "hasLvl3Items": false
-      },
-      {
-        "lvl2Item": "blog",
-        "lvl2Label": "Blog",
-        "lvl2Link": "/#",
-        "hasLvl3Items": false
-      },
-      {
-        "lvl2Item": "newsletters",
-        "lvl2Label": "Newsletters",
-        "lvl2Link": "/#",
-        "hasLvl3Items": false
-      }
-    ]
+    "hasLvl2Items": false
   }
 ]
