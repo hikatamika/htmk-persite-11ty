@@ -171,7 +171,7 @@ h1,h2,h3,h4,h5,h6 {
   -webkit-font-smoothing: antialiased;
 }
 
-h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   margin-block-start: 0;
 }
 
@@ -368,6 +368,10 @@ figure.hika-float > img {
 
 h1:has(+ div), .rss-header:has(+ div) {
   margin-block-end: var(--spacing-05);
+}
+
+h1 + .rss-header, h2 + .rss-header, h3 + .rss-header, h4 + .rss-header, h5 + .rss-header, h1 + .rss-header > h2, h2 + .rss-header > h3, h3 + .rss-header > h4, h4 + .rss-header > h5, h5 + .rss-header > h6 {
+  margin-block-start: 0;
 }
 
 .status-box {
