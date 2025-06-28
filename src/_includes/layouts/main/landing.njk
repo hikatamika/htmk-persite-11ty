@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
-    {% include 'layouts/head.njk' %}
+    {% include "layouts/head.njk" %}
     <link rel="stylesheet" href="/src/css/main.min.css">
   </head>
   <body>
@@ -12,7 +12,7 @@
           <span class="visually-hidden">Close</span></button>
         <nav id="mobileNav" class="mobile-nav">
           <ul>
-            {% include '../main/nav-menu.njk' %}
+            {% include "../main/nav-menu.njk" %}
           </ul>
         </nav>
       </div>
@@ -25,12 +25,12 @@
     </header>
     <div id="siteBox">
       <main>
-        <h1>{{title | makeTitleCase}}</h1>
-        {{ content | safe}}
+        <h1>{{ title | makeTitleCase }}</h1>
+        {{ content | safe }}
       </main>
     </div>
     <footer>
-      {% include 'layouts/footer-copyright.njk' %}
+      {% include "layouts/footer-copyright.njk" %}
     </footer>
     <script src="/src/js/app.min.js"></script>
   </body>
