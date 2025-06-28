@@ -1,0 +1,6 @@
+{
+  "tags": "changeLog",
+  "eleventyComputed": {
+    "title": "Site Update: {{ date | JStoDateTimeMed }} {{ date | JStoTimezone }}"
+  }
+}
