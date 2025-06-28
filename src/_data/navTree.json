@@ -6,6 +6,12 @@
     "hasLvl2Items": true,
     "lvl2Items": [
       {
+        "lvl2Item": "the lab",
+        "lvl2Label": "The Lab",
+        "lvl2Link": "/the-lab",
+        "hasLvl3Items": false
+      },
+      {
         "lvl2Item": "library",
         "lvl2Label": "Library",
         "lvl2Link": "/library",
