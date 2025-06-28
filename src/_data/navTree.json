@@ -104,6 +104,12 @@
         "lvl2Label": "Notes",
         "lvl2Link": "/notes",
         "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "statuses",
+        "lvl2Label": "Statuses",
+        "lvl2Link": "/status",
+        "hasLvl3Items": false
       }
     ]
   },
@@ -150,7 +156,7 @@
   {
     "lvl1Item": "rss",
     "lvl1Label": "RSS",
-    "lvl1Link": "/#",
+    "lvl1Link": "/feed.xml",
     "hasLvl2Items": false
   }
 ]
