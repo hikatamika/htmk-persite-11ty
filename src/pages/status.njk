@@ -1,0 +1,24 @@
+---
+layout: /layouts/main/main-rss.njk
+title: Statuses
+rssLink: "/status.xml"
+pagination:
+  data: collections.myStatus
+  size: 24
+  alias: statuses
+---
+
+<div class="status-roll">
+  {% for status in statuses %}
+    <div class="status-box">
+      <div class="status-icon">
+        <a href="/status" class="status-rss">
+          <img src="/src/img/hika-status.webp" alt="Hika Icon">
+        </a>
+      </div>
+      <div class="status-message">
+        <span><b>{{ status.date | JStoRelative | makeTitleCase }}:</b> {{ status.content | safe }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</div>

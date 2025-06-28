@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
   <head>
     {% include "layouts/head.njk" %}
@@ -9,7 +9,8 @@
       <div id="navModalBody" class="fadeable">
         <button id="mobileNavClose" class="button-hide">
           <i class="fa-solid fa-xmark fa-fw"></i>
-          <span class="visually-hidden">Close</span></button>
+          <span class="visually-hidden">Close</span>
+        </button>
         <nav id="mobileNav" class="mobile-nav">
           <ul>
             {% include "../main/nav-menu.njk" %}
@@ -25,13 +26,21 @@
     </header>
     <div id="siteBox">
       <main>
-        <h1>{{ title | makeTitleCase }}</h1>
-        {{ content | safe }}
-      </main>
-    </div>
-    <footer>
-      {% include "layouts/footer-copyright.njk" %}
-    </footer>
-    <script src="/src/js/app.min.js"></script>
-  </body>
-</html>
+        <div class="status-box">
+          <div class="status-icon"><a href="/status" class="status-rss"><img src="/src/img/hika-status.webp" alt="Hika Icon"></a></div>
+          <div class="status-message">
+          {% set firstStatus = collections.myStatus | first %}
+          <span><b>{{ firstStatus.date | JStoRelative | makeTitleCase }}:</b> {{ firstStatus.content | safe }}</span>
+          </div>
+          <a href="/status.xml" target="_blank" class="status-rss"><i class="fa-solid fa-rss fa-xl"></i></a>
+        </div>
+          <h1>{{ title | makeTitleCase }}</h1>
+          {{ content | safe }}
+        </main>
+      </div>
+      <footer>
+        {% include "layouts/footer-copyright.njk" %}
+      </footer>
+      <script src="/src/js/app.min.js"></script>
+    </body>
+  </html>
