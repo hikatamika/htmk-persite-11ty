@@ -73,7 +73,7 @@ export default function (eleventyConfig) {
     return `<a href="${linkURL}" target="_blank">`
   }
   );
-  eleventyConfig.addShortcode("endEextLinkPair", async function extLink(linkText, linkURL) {
+  eleventyConfig.addShortcode("endExtLinkPair", async function extLink(linkText, linkURL) {
     return `</a>`
   }
   );
