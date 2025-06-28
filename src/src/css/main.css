@@ -1,0 +1,703 @@
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable selector-id-pattern */
+/* stylelint-disable-next-line comment-empty-line-before */
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/* stylelint-disable-next-line comment-empty-line-before */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+/* stylelint-disable-next-line selector-no-vendor-prefix */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ============    Start Variables      ============ */
+
+:root {
+  /* ============ Spacing Variables ============ */
+  --spacing-025: .25rem;
+  --spacing-035: .35rem;
+  --spacing-05: .5rem;
+  --spacing-06: .625rem;
+  --spacing-07: .75rem;
+  --spacing-10: 1rem;
+  --spacing-15: 1.5rem;
+  --spacing-20: 2rem;
+  --spacing-25: 2.5rem;
+  --spacing-30: 3rem;
+  --spacing-40: 4rem;
+  --spacing-50: 5rem;
+  --spacing-60: 6rem;
+  --spacing-66: 6.666rem;
+  --spacing-70: 7rem;
+  --spacing-75: 7.5rem;
+  --spacing-80: 8rem;
+  --spacing-90: 9rem;
+  --spacing-100: 10rem;
+
+  /* ============ Color Variables ============ */
+  --color-hk-white: #f9f9f9;
+  --color-hk-light-background: #e5e5e5;
+  --color-hk-slight-background: #e0e0e0;
+  --color-hk-mid-background: #CCC;
+  --color-hk-background: #545454;
+  --color-hk-black: #262626;
+  --color-hk-deep-purple: #67548b;
+  --color-hk-dry-purple: #664E80;
+  --color-hk-mid-purple: #9071B1;
+  --color-hk-light-purple: #ad8fcc;
+  --color-hk-magenta: #d8006b;
+  --color-hk-deep-magenta: #B30058;
+  --color-hk-deeper-magenta: #A30051;
+  --color-hk-mid-pink: #E866A6;
+  --color-hk-light-pink: #F9C;
+  --color-hk-deep-blue: #0095d7;
+  --color-hk-mid-blue: #5cc1f1;
+  --color-hk-light-blue: #8bd8ff;
+
+  /* ============ Speed Variables ============ */
+  --speed-snappy: 0.333s;
+
+  /* ============ Font Size Variables ============ */
+  --fontsize-caption: 0.9rem;
+  --fontsize-normal: 1rem;
+
+  /* ============ Border Radius Variables ============ */
+  --br-small: 4px;
+  --br-x-small: 4px;
+}
+
+/* ============    Start Content      ============ */
+
+/* ====== Content ====== */
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--color-hk-deep-purple);
+  margin-block-end: 0;
+  font-family: Rubik, sans-serif;
+}
+
+body {
+  color: var(--color-hk-black);
+}
+
+p {
+  margin-top: 0;
+}
+
+a:link, a:visited {
+  color: var(--color-hk-magenta)
+}
+
+a:hover {
+  color: var(--color-hk-mid-pink)
+}
+
+a:active {
+  color: var(--color-hk-light-pink)
+}
+
+code, tt, kbd, var, samp {
+  background-color: var(--color-hk-mid-background);
+}
+
+abbr[title], acronym[title], dfn[title] {
+  text-decoration: underline dotted var(--color-hk-mid-pink);
+}
+
+h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
+  margin-block-start: 0;
+}
+
+li::marker {
+  color: var(--color-hk-deep-purple);
+}
+
+ol > li::marker {
+  font-weight: bold;
+}
+
+dt {
+  font-weight: bold;
+  color: var(--color-hk-deep-purple);
+}
+
+dd {
+  font-style: italic;
+}
+
+address {
+  display: block;
+  margin-block: 1em;
+  margin-inline: 40px;
+  background-color: var(--color-hk-mid-background);
+  width: fit-content;
+}
+
+/* ====== Tables ====== */
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td, table th {
+  border: 1px solid var(--color-hk-deep-purple);
+  padding: 6px;
+}
+
+table tr {background-color: var(--color-hk-mid-background);}
+
+table thead tr {
+  padding: 12px 0;
+  text-align: left;
+  background-color: var(--color-hk-deep-purple);
+  color: white;
+}
+
+table tr:nth-child(even){background-color: var(--color-hk-mid-background);}
+
+table thead tr:hover {
+  background-color: var(--color-hk-deep-purple) !important;
+}
+
+/* ============   End Content     ============ */
+
+/* ============    Start Site      ============ */
+
+/* ======   Site   ====== */
+
+/* Default: Extra-small devices such as small phones (less than 640px) 📱 */
+/* stylelint-disable-next-line no-duplicate-selectors */
+body {
+  background-image: url("../img/bg-tile.png");
+  margin: 0;
+}
+
+#siteBox {
+  margin: 0 auto ;
+  background-color: white;
+  padding: var(--spacing-15) var(--spacing-25);
+  border-radius: var(--br-small);
+}
+
+figure.hika-float {
+  animation-name: hika-float;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin: var(--spacing-10) auto var(--spacing-20);
+}
+
+@keyframes hika-float {
+0% {
+  transform: translate(0, 0);
+}
+
+50% {
+  transform: translate(0, 15px);
+}
+
+100% {
+  transform: translate(0, -0);
+}
+}
+
+figure.hika-float > img {
+  height: auto !important;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ======   Nav   ====== */
+#desktopNav {
+  display: none;
+}
+
+#mobileNav {
+  display: block;
+}
+
+#mobileNavKnob {
+  padding-block: var(--spacing-05);
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 22px;
+  color: white;
+}
+
+#mobileNavDrawer > #mobileNavList.top-nav-list {
+  margin-block-start: 0;
+}
+
+.mobile-nav-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.top-nav-list {
+  font-size: 1.125rem;
+  padding: 0;
+}
+
+.top-nav-list li {
+  list-style-type: none;
+  font-family: "Sour Gummy", cursive;
+  font-weight: 600;
+}
+
+.top-nav-list ul {
+  padding-inline-start: 0;
+}
+
+.top-nav-list > li {
+  text-align: center;
+}
+
+.top-nav-list > li a {
+  display:block;
+}
+
+li.nav-dropdown-0 > a {
+  color: white;
+  padding: var(--spacing-05) var(--spacing-15);
+}
+
+.nav-dropdown-1, .nav-dropdown-2 {
+  background-color: white;
+  transition: background-color calc(var(--speed-snappy)/1.5);
+  transition-timing-function: ease;
+  cursor: pointer;
+  font-size: .75em;
+}
+
+.nav-dropdown-1 {
+  border-bottom: 1px solid var(--color-hk-mid-background);
+}
+
+.nav-dropdown-1:hover, .nav-dropdown-1:active {
+  background-color: var(--color-hk-light-background);
+  transition: background-color calc(var(--speed-snappy)/1.5);
+  transition-timing-function: ease;
+}
+
+.nav-dropdown-1:last-of-type {
+  border-bottom: none;
+}
+
+/* .nav-dropdown-1:has(>.nav-dropdown-2:hover)  {
+  background-color: white;
+  transition: background-color calc(var(--speed-snappy)/1.5);
+  transition-timing-function: ease;
+} */
+
+.nav-dropdown-1 a {
+  color: var(--color-hk-black) !important;
+  padding: var(--spacing-05) var(--spacing-20);
+}
+
+.nav-dropdown-1 li {
+  width: 100%;
+}
+
+.nav-dropdown-1 > ul {
+  position: unset;
+}
+
+.nav-dropdown-2 {
+  font-size: 0.85em;
+}
+
+.nav-dropdown-2:hover, .nav-dropdown-2:active {
+  background-color: var(--color-hk-light-background);
+  transition: background-color calc(var(--speed-snappy)/1.5);
+  transition-timing-function: ease;
+}
+
+/* ======   Footer   ====== */
+footer {
+  display: flex;
+  justify-content: center;
+  margin-block: var(--spacing-10);
+}
+
+footer span {
+  font-size: var(--fontsize-caption);
+  color: white;
+}
+
+/* Small devices such as large phones (640px and up) 📱 */
+/* stylelint-disable-next-line block-no-empty */
+@media only screen and (width >= 640px) {
+
+}
+
+/* Medium devices such as tablets (768px and up) 📱 */
+@media only screen and (width >= 768px) {
+/* ======   Site Stuff   ====== */
+  body {
+    margin: var(--spacing-10);
+  }
+
+  figure.hika-float {
+    width: 75%;
+  }
+
+  /* ======   Nav Stuff   ====== */
+  .top-nav-list {
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 var(--spacing-30);
+  }
+  
+  #mobileNav {
+    display: none;
+  }
+  
+  #desktopNav {
+    display: block;
+  }
+  
+  #desktopNav a {
+    white-space: nowrap !important;
+  }
+  
+  .nav-dropdown-0 {
+    position:relative;
+  }
+  
+  li.nav-dropdown-0 > a {
+    padding: 0;
+  }
+  
+  .nav-dropdown-0 > ul {
+    position:absolute;
+    /* left:0; */
+    display:none; /* hides sublists */
+    z-index: 10;
+  }
+  
+  .nav-dropdown-0:hover > ul {display:block;} /* shows sublist on hover */
+  
+  
+  .nav-dropdown-1 {
+    transition: background-color calc(var(--speed-snappy)/1.5);
+    transition-timing-function: ease;
+    position: relative;
+  }
+  
+  .nav-dropdown-1:hover, .nav-dropdown-1:active {
+    transition: background-color calc(var(--speed-snappy)/1.5);
+    transition-timing-function: ease;
+  }
+  
+  .nav-dropdown-1:first-of-type {
+    border-radius: var(--br-x-small) var(--br-x-small) 0 0;
+  }
+  
+  .nav-dropdown-1:last-of-type {
+    border-radius: 0 0 var(--br-x-small) var(--br-x-small);
+  }
+  
+  .nav-dropdown-1:has(~ .nav-dropdown-1:hover) {
+    border-radius: 0;
+  }
+  
+  .nav-dropdown-1 > ul {
+    display:none; /* hides sub-sublists */
+    left: 100%;
+    top: 0;
+    position: absolute;
+  } 
+  
+  .nav-dropdown-1:hover > ul {display:block;} /* shows sublist on hover */
+  
+  .nav-dropdown-2 {
+    font-size: 1em;
+    border-left: 1px solid var(--color-hk-mid-background);
+  }
+  
+  .nav-dropdown-2:first-of-type {
+    border-radius: 0 var(--br-x-small) 0 0;
+  }
+  
+  .nav-dropdown-2:last-of-type {
+    border-radius: 0 0 var(--br-x-small) 0;
+  }
+}
+
+
+/* Large devices such as laptops (1024px and up) 💻 */
+@media only screen and (width >= 1024px) {
+  #siteBox {
+    max-width: 1280px;
+  }
+
+  figure.hika-float {
+    width: 512px;
+  }
+}
+
+/* Largest devices such as desktops (1280px and up) 💻 */
+@media only screen and (width >= 1280px) {}
+
+/* WSXGA+ Screens+ 💻 */
+@media only screen and (width >= 1680px) {}
+
+/* ============    End Site      ============ */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* stylelint-disable-next-line comment-empty-line-before */
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  /* stylelint-disable-next-line media-feature-name-no-vendor-prefix */
+  (-webkit-min-device-pixel-ratio: 1.25),
+  /* stylelint-disable-next-line media-feature-range-notation */
+  (min-resolution: 1.25dppx),
+  /* stylelint-disable-next-line media-feature-range-notation */
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* stylelint-disable-next-line comment-empty-line-before */
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

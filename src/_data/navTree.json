@@ -1,0 +1,176 @@
+[
+  {
+    "lvl1Item": "media",
+    "lvl1Label": "Media",
+    "lvl1Link": "/#",
+    "hasLvl2Items": true,
+    "lvl2Items": [
+      {
+        "lvl2Item": "library",
+        "lvl2Label": "Library",
+        "lvl2Link": "/library",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "galleries",
+        "lvl2Label": "Galleries",
+        "lvl2Link": "/#",
+        "hasLvl3Items": true,
+        "lvl3Items": [
+          {
+            "lvl3Item": "artGallery",
+            "lvl3Label": "Art Gallery",
+            "lvl3Link": "/art-gallery"
+          },
+          {
+            "lvl3Item": "designGallery",
+            "lvl3Label": "Design Gallery",
+            "lvl3Link": "/design-gallery"
+          }
+        ]
+      },
+      {
+        "lvl2Item": "computerRoom",
+        "lvl2Label": "Computer Room",
+        "lvl2Link": "/#",
+        "hasLvl3Items": true,
+        "lvl3Items": [
+          {
+            "lvl3Item": "bskyFeeds",
+            "lvl3Label": "Bluesky Feeds",
+            "lvl3Link": "/bluesky-feeds"
+          },
+          {
+            "lvl3Item": "utau",
+            "lvl3Label": "UTAU",
+            "lvl3Link": "/utau"
+          }
+        ]
+      },
+      {
+        "lvl2Item": "cinema",
+        "lvl2Label": "Cinema",
+        "lvl2Link": "/cinema",
+        "hasLvl3Items": false
+      }
+    ]
+  },
+  {
+    "lvl1Item": "about",
+    "lvl1Label": "About",
+    "lvl1Link": "/#",
+    "hasLvl2Items": true,
+    "lvl2Items": [
+      {
+        "lvl2Item": "aboutMe",
+        "lvl2Label": "About Me",
+        "lvl2Link": "/about",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "bskyTags",
+        "lvl2Label": "My Bluesky Tags",
+        "lvl2Link": "/bluesky-tags",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "touFaq",
+        "lvl2Label": "T.O.U. / F.A.Q.",
+        "lvl2Link": "/art-tou-faq",
+        "hasLvl3Items": false
+      }
+    ]
+  },
+  {
+    "lvl1Item": "posts",
+    "lvl1Label": "Posts",
+    "lvl1Link": "/#",
+    "hasLvl2Items": true,
+    "lvl2Items": [
+      {
+        "lvl2Item": "blog",
+        "lvl2Label": "Blog",
+        "lvl2Link": "/blog",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "notes",
+        "lvl2Label": "Notes",
+        "lvl2Link": "/notes",
+        "hasLvl3Items": false
+      }
+    ]
+  },
+  {
+    "lvl1Item": "contact",
+    "lvl1Label": "Contact",
+    "lvl1Link": "/#",
+    "hasLvl2Items": true,
+    "lvl2Items": [
+      {
+        "lvl2Item": "guestbook",
+        "lvl2Label": "Guestbook",
+        "lvl2Link": "/guestbook",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "mailingList",
+        "lvl2Label": "Mailing List",
+        "lvl2Link": "/mailing-list",
+        "hasLvl3Items": false
+      }
+    ]
+  },
+  {
+    "lvl1Item": "links",
+    "lvl1Label": "Links",
+    "lvl1Link": "/#",
+    "hasLvl2Items": true,
+    "lvl2Items": [
+      {
+        "lvl2Item": "myLinks",
+        "lvl2Label": "My Links",
+        "lvl2Link": "/my-links",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "linksOut",
+        "lvl2Label": "Links Out",
+        "lvl2Link": "/links-out",
+        "hasLvl3Items": false
+      }
+    ]
+  },
+  {
+    "lvl1Item": "rss",
+    "lvl1Label": "RSS",
+    "lvl1Link": "/#",
+    "hasLvl2Items": true,
+    "lvl2Items": [
+      {
+        "lvl2Item": "All",
+        "lvl2Label": "All",
+        "lvl2Link": "/#",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "art",
+        "lvl2Label": "Art",
+        "lvl2Link": "/#",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "blog",
+        "lvl2Label": "Blog",
+        "lvl2Link": "/#",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "newsletters",
+        "lvl2Label": "Newsletters",
+        "lvl2Link": "/#",
+        "hasLvl3Items": false
+      }
+    ]
+  }
+]

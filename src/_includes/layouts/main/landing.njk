@@ -1,0 +1,22 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    {% include 'layouts/head.njk' %}
+    <link rel="stylesheet" href="/src/css/main.min.css">
+  </head>
+  <body>
+    <header>
+      {% include "../main/floating-hika.njk" %}
+    <nav id="topNav">
+      {% include "../main/top-nav.njk" %}
+    </nav>
+    </header>
+    <div id="siteBox">
+      {{ content }}
+    </div>
+    <footer>
+      {% include 'layouts/footer-copyright.njk' %}
+    </footer>
+    <script src="/src/js/app.min.js"></script>
+  </body>
+</html>

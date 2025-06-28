@@ -1,0 +1,21 @@
+<div id="desktopNav">
+  <ul class="top-nav-list site-panel">
+    {% include '../main/nav-menu.njk' %}
+  </ul>
+</div>
+<div id="mobileNav">
+  <button id="mobileNavKnob">
+    {# <svg viewBox="0 0 100 80" width="30" height="30">
+            <rect width="100" height="15" fill="currentColor"></rect>
+            <rect y="33" width="100" height="15" fill="currentColor"></rect>
+            <rect y="66" width="100" height="15" fill="currentColor"></rect>
+          </svg> #}
+    <i class="fa-solid fa-bars fa-lg"></i>
+    <span class="visually-hidden">Navigation Menu</span>
+  </button>
+  <div id="mobileNavDrawer" class="mobile-nav-collapse">
+    <ul id="mobileNavList" class="top-nav-list site-panel">
+      {% include '../main/nav-menu.njk' %}
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{% for lvl1Item in navTree %}
+  <li class="nav-dropdown-0">
+    <a href="{{ lvl1Item.lvl1Link }}" class="sidenav-lvl1">
+      <span>{{ lvl1Item.lvl1Label }}&nbsp;<i class="fa-solid fa-chevron-down fa-xs"></i></span></a>
+    {% if lvl1Item.hasLvl2Items %}
+      <ul>
+        {% for lvl2Item in lvl1Item.lvl2Items %}
+          <li class="nav-dropdown-1">
+            <a href="{{ lvl2Item.lvl2Link }}" class="sidenav-lvl2">
+              <span>{{ lvl2Item.lvl2Label }}</span></a>
+            {% if lvl2Item.hasLvl3Items %}
+              <ul>
+                {% for lvl3Item in lvl2Item.lvl3Items %}
+                  <li class="nav-dropdown-2">
+                    <a href="{{ lvl3Item.lvl3Link }}" class="sidenav-lvl2">
+                      <span>{{ lvl3Item.lvl3Label }}</span></a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+{% endfor %}

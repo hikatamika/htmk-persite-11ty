@@ -1,0 +1,11 @@
+# NPM
+/node_modules
+/package-lock.json
+/package.json
+
+#VSC
+/.vscode
+/.stylelintrc.json
+
+#11ty Output
+/_site
