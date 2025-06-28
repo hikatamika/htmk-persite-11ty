@@ -6,6 +6,7 @@
 #VSC
 /.vscode
 /.stylelintrc.json
+/dict
 
 #11ty Output
 /_site
