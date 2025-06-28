@@ -339,6 +339,12 @@ figure.hika-float > img {
   display: block;
 }
 
+#siteBanner {
+  margin: 0 auto;
+  display: block;
+  border-radius: var(--br-small);
+}
+
 .sitebuttons img {
   image-rendering: pixelated;
 }
@@ -599,8 +605,12 @@ footer span {
 
 /* Large devices such as laptops (1024px and up) 💻 */
 @media only screen and (width >= 1024px) {
-  #siteBox {
+  #siteBanner {
     max-width: 1280px;
+  }
+
+  #siteBox {
+    max-width: calc(1280px - (var(--spacing-25) * 4) );
   }
 
   figure.hika-float {
