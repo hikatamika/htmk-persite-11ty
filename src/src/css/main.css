@@ -293,7 +293,7 @@ body {
 }
 
 #navModalBody {
-  background: rgba(103, 84, 139, 0.95);
+  background: rgb(103 84 139 / 95%);
   height: 100%;
 }
 
