@@ -23,7 +23,8 @@
       </nav>
     </header>
     <div id="siteBox">
-      {{ content }}
+      <h1>{{title | makeTitleCase}}</h1>
+      {{ content | safe}}
     </div>
     <footer>
       {% include 'layouts/footer-copyright.njk' %}

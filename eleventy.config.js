@@ -28,24 +28,10 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/robots.txt");
   }
 
+  
   /* ==========
-     Custom Taxonomy
-     ========== */
-  eleventyConfig.addFilter("taxonomy", (arr, path, value) => {
-
-    value = lodash.deburr(value).toLowerCase();
-
-    return arr.filter((item) => {
-      let pathValue = lodash.get(item, path);
-      pathValue = lodash.deburr(pathValue).toLowerCase();
-      return pathValue.includes(value);
-    });
-
-  });
-
-  /* ==========
-     Date Parsing
-     ========== */
+  Date Parsing
+  ========== */
   eleventyConfig.addDateParsing(function (dateValue) {
     let localDate;
     if (dateValue instanceof Date) { // and YAML
@@ -60,8 +46,67 @@ export default function (eleventyConfig) {
   });
 
   /* ==========
-     Filters
-     ========== */
+    Shortcodes
+    ========== */
+  //Email Link
+  eleventyConfig.addShortcode("emailLink", async function emailLink(email) {
+    return `<a href="mailto:${email}">${email}</a>`
+  }
+  );
+
+  eleventyConfig.addShortcode("emailLinkPair", async function emailLink(email) {
+    return `<a href="mailto:${email}">`
+  }
+  );
+
+  eleventyConfig.addShortcode("endEmailLinkPair", async function emailLink() {
+    return `</a>`
+  }
+  );
+
+  //External Link
+  eleventyConfig.addShortcode("extLink", async function extLink(linkText, linkURL) {
+    return `<a href="${linkURL}" target="_blank">${linkText}</a>`
+  }
+  );
+  eleventyConfig.addShortcode("extLinkPair", async function extLink(linkURL) {
+    return `<a href="${linkURL}" target="_blank">`
+  }
+  );
+  eleventyConfig.addShortcode("endEextLinkPair", async function extLink(linkText, linkURL) {
+    return `</a>`
+  }
+  );
+
+  //Internal Link
+  eleventyConfig.addShortcode("intLink", async function extLink(linkText, linkURL) {
+    return `<a href="${linkURL}">${linkText}</a>`
+  }
+  );
+  eleventyConfig.addShortcode("intLinkPair", async function extLink(linkURL) {
+    return `<a href="${linkURL}">`
+  }
+  );
+  eleventyConfig.addShortcode("endIntLinkPair", async function extLink(linkText, linkURL) {
+    return `</a>`
+  }
+  );
+  
+  /* ==========
+  Filters
+  ========== */
+  /* Custom Taxonomy */
+  eleventyConfig.addFilter("taxonomy", (arr, path, value) => {
+
+    value = lodash.deburr(value).toLowerCase();
+
+    return arr.filter((item) => {
+      let pathValue = lodash.get(item, path);
+      pathValue = lodash.deburr(pathValue).toLowerCase();
+      return pathValue.includes(value);
+    });
+
+  });
   eleventyConfig.addFilter(
     "date",
     (date, format, locale = "en") =>
@@ -71,6 +116,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter(
     "fullDateToYear", (date) => DateTime.fromJSDate(date).toFormat('kkkk')
   )
+
+  eleventyConfig.addFilter(
+    "makeTitleCase", function (input) {
+      return lodash.startCase(input);
+    });
 
   // HTML Minify
   eleventyConfig.addTransform("htmlmin", function (content) {
