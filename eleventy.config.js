@@ -7,7 +7,10 @@ import lodash from "lodash";
 // Luxon
 import { DateTime } from "luxon";
 // See https://moment.github.io/luxon/#/zones?id=specifying-a-zone
-const TIME_ZONE = "America/Los_angeles";
+const TIME_ZONE = "America/Los_Angeles";
+
+// 11ty RSS
+import pluginRss from "@11ty/eleventy-plugin-rss";
 
 export const config = {
   dir: {
@@ -28,22 +31,35 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/robots.txt");
   }
 
+  /* ==========
+     RSS
+     ========== */
+  eleventyConfig.addPlugin(pluginRss);
+
+  /* ==========
+     Custom Global Data
+     ========== */
+  eleventyConfig.addGlobalData('lastBuildDate', () => {
+    const now = DateTime.now();
+    let nowISO = now.toISO();
+    return nowISO;
+  });
   
   /* ==========
   Date Parsing
   ========== */
-  eleventyConfig.addDateParsing(function (dateValue) {
-    let localDate;
-    if (dateValue instanceof Date) { // and YAML
-      localDate = DateTime.fromJSDate(dateValue, { zone: "utc" }).setZone(TIME_ZONE, { keepLocalTime: true });
-    } else if (typeof dateValue === "string") {
-      localDate = DateTime.fromISO(dateValue, { zone: TIME_ZONE });
-    }
-    if (localDate?.isValid === false) {
-      throw new Error(`Invalid \`date\` value (${dateValue}) is invalid for ${this.page.inputPath}: ${localDate.invalidReason}`);
-    }
-    return localDate;
-  });
+  eleventyConfig.addDateParsing(function(dateValue) {
+		let localDate;
+		if(dateValue instanceof Date) { // and YAML
+			localDate = DateTime.fromJSDate(dateValue, { zone: "utc" }).setZone(TIME_ZONE, { keepLocalTime: true });
+		} else if(typeof dateValue === "string") {
+			localDate = DateTime.fromISO(dateValue, { zone: TIME_ZONE });
+		}
+		if (localDate?.isValid === false) {
+			throw new Error(`Invalid \`date\` value (${dateValue}) is invalid for ${this.page.inputPath}: ${localDate.invalidReason}`);
+		}
+		return localDate;
+	});
 
   /* ==========
     Shortcodes
@@ -116,11 +132,33 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter(
     "fullDateToYear", (date) => DateTime.fromJSDate(date).toFormat('kkkk')
   )
+  eleventyConfig.addFilter(
+    "JStoDateTimeMed", (date) => DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_MED)
+  )
+  eleventyConfig.addFilter(
+    "ISOtoDateTimeMed", (date) => DateTime.fromISO(date).toLocaleString(DateTime.DATETIME_MED)
+  )
+  eleventyConfig.addFilter(
+    "JStoTimezone", (date) => DateTime.fromJSDate(date).toFormat('ZZZZ')
+  )
+  eleventyConfig.addFilter(
+    "ISOtoTimezone", (date) => DateTime.fromISO(date).toFormat('ZZZZ')
+  )
+  eleventyConfig.addFilter(
+    "JStoRelative", (date) => DateTime.fromJSDate(date).toRelative()
+  )
+  eleventyConfig.addFilter(
+    "ISOtoRelative", (date) => DateTime.fromISO(date).toRelative()
+  )
 
   eleventyConfig.addFilter(
     "makeTitleCase", function (input) {
       return lodash.startCase(input);
     });
+
+  eleventyConfig.addFilter('log', value => {
+    console.log(value)
+  });
 
   // HTML Minify
   eleventyConfig.addTransform("htmlmin", function (content) {
