@@ -1,7 +1,7 @@
 {% for lvl1Item in navTree %}
   <li class="nav-dropdown-0">
     <a href="{{ lvl1Item.lvl1Link }}" class="sidenav-lvl1">
-      <span>{{ lvl1Item.lvl1Label }}&nbsp;<i class="fa-solid fa-chevron-down fa-xs"></i></span></a>
+      <span>{{ lvl1Item.lvl1Label }}{% if lvl1Item.hasLvl2Items %}&nbsp;<i class="fa-solid fa-chevron-down fa-xs"></i>{% endif %}</span></a>
     {% if lvl1Item.hasLvl2Items %}
       <ul>
         {% for lvl2Item in lvl1Item.lvl2Items %}
