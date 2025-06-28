@@ -15,9 +15,11 @@ title: Home
   My <a href="https://hikatamika.com/my-links/"><b>My Links</b></a> page is the one with my pages on all the social media apps you love to use, but my <a href="https://hikatamika.com/links-out/"><b>Links Out</b></a> page is a huge list of useful creative resources and other artists’ websites.
 </p>
 <hr class="hr-33">
-<div class="sitebuttons-center">
-  {% for button in webButtonsHome %}
+<div class="sitebuttons sitebuttons-center">
+  {% for button in webButtons8831 %}
+  {% if buttonCateg == home %}
     {% include "blocks/button-roll.njk" %}
+  {% endif %}
   {% endfor %}
 </div>
 <hr class="hr-33">

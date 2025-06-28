@@ -1,0 +1,25 @@
+[
+  {
+    "buttonImg": "censor-14c.gif",
+    "buttonAlt": "Censorship Panda Web 14 Rating",
+    "buttonCateg": "home",
+    "buttonLink": "https://www.mabsland.com/Adoption.html"
+  },
+  {
+    "buttonImg": "bookmark.gif",
+    "buttonAlt": "Bookmark this Page",
+    "buttonCateg": "home"
+  },
+  {
+    "buttonImg": "built-with-eleventy.gif",
+    "buttonAlt": "Built with Eleventy",
+    "buttonCateg": "home",
+    "buttonLink": "https://chrisburnell.com/note/eleventy-animated-88x31/"
+  },
+  {
+    "buttonImg": "vs-code.png",
+    "buttonAlt": "Built with Visual Studio Code",
+    "buttonCateg": "home",
+    "buttonLink": "https://jspaint.app/about"
+  }
+]
