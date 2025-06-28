@@ -5,11 +5,22 @@
     <link rel="stylesheet" href="/src/css/main.min.css">
   </head>
   <body>
+    <div id="navModal" class="nav-modal">
+      <div id="navModalBody" class="fadeable">
+        <button id="mobileNavClose" class="button-hide">
+          <i class="fa-solid fa-xmark fa-fw"></i>
+          <span class="visually-hidden">Close</span></button>
+        <nav id="mobileNav" class="mobile-nav">
+          <ul>
+            {% include '../main/nav-menu.njk' %}
+          </ul>
+        </nav>
+      </div>
+    </div>
     <header>
-      <nav></nav>
-    <nav id="topNav">
-      {% include "../main/top-nav.njk" %}
-    </nav>
+      <nav id="topNav">
+        {% include "../main/top-nav.njk" %}
+      </nav>
     </header>
     <div id="siteBox">
       {{ content }}
