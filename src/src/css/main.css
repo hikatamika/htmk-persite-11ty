@@ -112,6 +112,9 @@ textarea {
   --spacing-80: 8rem;
   --spacing-90: 9rem;
   --spacing-100: 10rem;
+  --spacing-150: 15rem;
+  --spacing-200: 20rem;
+  --spacing-250: 25rem;
 
   /* ============ Color Variables ============ */
   --color-hk-white: #f9f9f9;
@@ -206,6 +209,10 @@ abbr[title], acronym[title], dfn[title] {
 
 h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
   margin-block-start: 0;
+}
+
+h1 + div {
+  margin-block-start: var(--spacing-10);
 }
 
 li::marker {
@@ -348,6 +355,97 @@ figure.hika-float > img {
 
 #siteBanner img {
   border-radius: var(--br-small);
+  width: 100%;
+  height: auto;
+}
+
+.rss-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+h1:has(+ div), .rss-header:has(+ div) {
+  margin-block-end: var(--spacing-05);
+}
+
+.status-box {
+    display: flex;
+    align-items: center;
+    gap: 0 var(--spacing-10);
+}
+
+.status-icon img {
+  height: 3.333rem;
+  width: auto;
+}
+
+.status-message {
+  background-color: var(--color-hk-slight-background);
+  /* color: #fff; */
+  /* text-align: center; */
+  padding: var(--spacing-05) var(--spacing-10);
+  border-radius: 6px;
+  position: relative;
+}
+
+.status-message::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -6px;
+  border-width: 6px 12px 6px 0;
+  border-style: solid;
+  border-color: transparent var(--color-hk-slight-background) transparent transparent;
+}
+
+.status-rss {
+  margin-left: auto;
+}
+
+#changelogBox {
+  width: 100%;
+  min-height: var(--spacing-150);
+  overflow-y: scroll;
+  border: var(--color-hk-mid-background) solid 1px;
+  margin-block-end: var(--spacing-10);
+}
+
+#changelogBox ul {
+  padding-inline-start: 0;
+  margin: var(--spacing-10);
+}
+
+#changelogBox li {
+  list-style: none;
+}
+
+.changelog-header {
+  color: var(--color-hk-deep-purple);
+  margin-block-end: 0;
+  font-family: Saira, sans-serif;
+  font-weight: 650;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.changelog-link {
+    text-align: end;
+}
+
+.changelog-link button {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+hr.changelog-sep {
+  border-top: 2px solid var(--color-hk-background);
+}
+
+hr.changelog-sep:last-child {
+  display: none;
 }
 
 .sitebuttons img {
