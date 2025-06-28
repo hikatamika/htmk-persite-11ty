@@ -26,7 +26,7 @@
   </author>
   {%- for post in collections.myStatus | reverse %}
   <entry>
-    <title>{{ post.data.title }}</title>
+    <title>{{- post.data.title -}}</title>
     <link href="{{ metadata.base }}" />
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ metadata.base }}</id>
