@@ -1,0 +1,60 @@
+---json
+{
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "HK★TMK",
+    "description": "All content updates from HikaTamika.com",
+    "language": "en",
+    "base": "https://example.com/",
+    "author": {
+      "name": "HK★TMK"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
+<title>{{ metadata.title }}</title>
+<subtitle>{{ metadata.description }}</subtitle>
+<link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
+<link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
+<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+<id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
+<author>
+<name>{{ metadata.author.name }}</name>
+</author>
+{%- for post in collections.allSorted | reverse -%}
+  {%- set absolutePostUrl -%}
+    {%- if post.permalink -%}
+      {{- post.url | htmlBaseUrl(metadata.base) -}}
+    {%- elif post.data.tags == "myStatus" -%}
+      {{ metadata.base }}status/
+    {%- elif post.data.tags == "changeLog" -%}
+      {{ metadata.base }}
+    {%- elif post.data.tags == "page" -%}
+      {{ post.url | htmlBaseUrl(metadata.base) }}
+    {%- else -%}
+    {%- endif -%}
+  {%- endset -%}
+  <entry>
+  <title>
+    {%- if post.data.tags == "page" -%}
+      Page Updated: {{ post.data.title -}}
+    {%- else -%}
+      {{- post.data.title -}}
+    {%- endif -%}
+  </title>
+  <link href="{{ absolutePostUrl }}" />
+  <updated>{{ post.date | dateToRfc3339 }}</updated>
+  <id>{{- absolutePostUrl -}}</id>
+  <content type="html">
+    {%- if post.data.tags == "page" -%}
+      <a href="{{- absolutePostUrl -}}">Page Updated. Click to view.</a>
+    {%- else -%}
+      {{- post.content | renderTransforms(post.data.page, metadata.base) -}}
+    {%- endif -%}
+  </content>
+  </entry>
+{%- endfor -%}
+</feed>

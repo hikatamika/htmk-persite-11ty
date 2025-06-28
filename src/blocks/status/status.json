@@ -1,6 +1,6 @@
 {
   "tags": "myStatus",
   "eleventyComputed": {
-    "title": "Status: {{ date | JStoDateTimeMed }}"
+    "title": "Status: {{ date | JStoDateTimeMed }} {{ date | JStoTimezone }}"
   }
 }

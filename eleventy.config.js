@@ -62,6 +62,20 @@ export default function (eleventyConfig) {
 	});
 
   /* ==========
+    Custom Collections
+    ========== */
+	// Unsorted items (in whatever order they were added)
+	// Sort with `Array.sort`
+	eleventyConfig.addCollection("allSorted", function (collectionsApi) {
+		return collectionsApi.getAll().sort(function (a, b) {
+			//return a.date - b.date; // sort by date - ascending
+			return b.date - a.date; // sort by date - descending
+			//return a.inputPath.localeCompare(b.inputPath); // sort by path - ascending
+			//return b.inputPath.localeCompare(a.inputPath); // sort by path - descending
+		});
+	});
+
+  /* ==========
     Shortcodes
     ========== */
   //Email Link
