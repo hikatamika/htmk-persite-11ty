@@ -177,6 +177,12 @@ export default function (eleventyConfig) {
     "ISOtoTimezone", (date) => DateTime.fromISO(date).toFormat('ZZZZ')
   )
   eleventyConfig.addFilter(
+    "JStoInt", (date) => DateTime.fromJSDate(date).toUnixInteger()
+  )
+  eleventyConfig.addFilter(
+    "ISOtoInt", (date) => DateTime.fromISO(date).toUnixInteger()
+  )
+  eleventyConfig.addFilter(
     "JStoRelative", (date) => DateTime.fromJSDate(date).toRelative()
   )
   eleventyConfig.addFilter(
