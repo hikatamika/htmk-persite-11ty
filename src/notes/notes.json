@@ -1,0 +1,7 @@
+{
+  "tags": "notes",
+  "eleventyComputed": {
+    "title": "Note: {{ date | JStoDateTimeMed }} {{ date | JStoTimezone }}",
+    "permalink": "note/{{ page.date | JStoInt }}/index.html"
+  }
+}

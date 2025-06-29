@@ -1,0 +1,26 @@
+---
+layout: /layouts/main/main-rss.njk
+title: Notes
+rssLink: "/note.xml"
+pagination:
+  data: collections.notes
+  size: 24
+  alias: notes
+---
+
+<div class="pagi-navi pagi-navi-top">{% include "blocks/pagi-navi.njk" %}</div>
+<div class="status-roll">
+  {% for note in notes | reverse %}
+    <div class="status-box">
+      <div class="status-icon">
+        <a href="/status" class="status-rss">
+          <img src="/src/img/hika-status.webp" alt="Hika Icon">
+        </a>
+      </div>
+      <div class="status-message">
+        <span><b>{{ note.date | JStoRelative | makeTitleCase }}:</b> {{ note.content | safe }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+<div class="pagi-navi pagi-navi-bottom">{% include "blocks/pagi-navi.njk" %}</div>
