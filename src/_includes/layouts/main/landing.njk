@@ -29,7 +29,7 @@
         <div class="status-box">
           <div class="status-icon"><a href="/status" class="status-rss"><img src="/src/img/hika-status.webp" alt="Hika Icon"></a></div>
           <div class="status-message">
-          {% set firstStatus = collections.myStatus | reverse | first %}
+          {% set firstStatus = collections.statuses | reverse | first %}
           <span><b>{{ firstStatus.date | JStoRelative | makeTitleCase }}:</b> {{ firstStatus.content | safe }}</span>
           </div>
           <a href="/status.xml" target="_blank" class="status-rss"><i class="fa-solid fa-rss fa-xl"></i></a>

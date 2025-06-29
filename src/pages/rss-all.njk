@@ -28,9 +28,9 @@
   {%- set absolutePostUrl -%}
     {%- if post.permalink -%}
       {{- post.url | htmlBaseUrl(metadata.base) -}}
-    {%- elif post.data.tags == "myStatus" -%}
+    {%- elif post.data.tags == "statuses" -%}
       {{ metadata.base }}status/
-    {%- elif post.data.tags == "changeLog" -%}
+    {%- elif post.data.tags == "changelogs" -%}
       {{ metadata.base }}
     {%- elif post.data.tags == "page" -%}
       {{ post.url | htmlBaseUrl(metadata.base) }}

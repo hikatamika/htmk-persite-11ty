@@ -24,7 +24,7 @@
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
-  {%- for post in collections.changeLog | reverse %}
+  {%- for post in collections.changelogs | reverse %}
   {%- set absolutePostUrl %}{{metadata.base}}{{ post.data.statusLink}}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>

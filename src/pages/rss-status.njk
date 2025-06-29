@@ -19,12 +19,12 @@
   <subtitle>{{ metadata.description }}</subtitle>
   <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
   <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
-  <updated>{{ collections.myStatus | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ collections.statuses | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.base}}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
-  {%- for post in collections.myStatus | reverse %}
+  {%- for post in collections.statuses | reverse %}
   <entry>
     <title>{{- post.data.title -}}</title>
     <link href="{{ metadata.base }}" />
