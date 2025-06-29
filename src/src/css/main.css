@@ -376,8 +376,7 @@ h1 + .rss-header, h2 + .rss-header, h3 + .rss-header, h4 + .rss-header, h5 + .rs
 
 .status-roll {
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   gap: var(--spacing-15) 0;
 }
 

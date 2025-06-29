@@ -4,11 +4,11 @@
     {% if loop.index < 26 %}
     <li>
       <div class="changelog-update">
-        <span class="changelog-header">{{update.page.date | JStoDateTimeMed}} {{update.page.date | JStoTimezone}}</span><br><span>{{update.content}}</span>
+        <span class="changelog-header">{{ update.page.date | JStoDateTimeMed }} {{ update.page.date | JStoTimezone }}</span><br><span>{{ update.content }}</span>
       </div>
       {% if update.data.changelogLink %}
         <div class="changelog-link">
-          <a href="{{update.data.statusLink}}"><button class="clean-button comicsfxdict-styled-button"><i class="fa-solid fa-link fa-fw"></i> <span>Go! </span></button></a>
+          <a href="{{ update.data.statusLink }}"><button class="clean-button comicsfxdict-styled-button"><i class="fa-solid fa-link fa-fw"></i> <span>Go! </span></button></a>
         </div>
       {% endif %}
       </li>
