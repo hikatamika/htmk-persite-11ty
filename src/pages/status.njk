@@ -9,7 +9,7 @@ pagination:
 ---
 
 <div class="status-roll">
-  {% for status in statuses %}
+  {% for status in statuses | reverse %}
     <div class="status-box">
       <div class="status-icon">
         <a href="/status" class="status-rss">
