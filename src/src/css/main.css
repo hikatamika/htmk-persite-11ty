@@ -141,8 +141,26 @@ textarea {
   --speed-snappy: 0.333s;
 
   /* ============ Font Size Variables ============ */
-  --fontsize-caption: 0.9rem;
-  --fontsize-normal: 1rem;
+  --fontsize-200p: 2em;
+  --fontsize-190p: 1.9em;
+  --fontsize-180p: 1.8em;
+  --fontsize-170p: 1.7em;
+  --fontsize-160p: 1.6em;
+  --fontsize-150p: 1.5em;
+  --fontsize-140p: 1.4em;
+  --fontsize-130p: 1.3em;
+  --fontsize-120p: 1.2em;
+  --fontsize-110p: 1.1em;
+  --fontsize-100p: 1em;
+  --fontsize-90p: 0.9em;
+  --fontsize-80p: 0.8em;
+  --fontsize-70p: 0.7em;
+  --fontsize-60p: 0.6em;
+  --fontsize-50p: 0.5em;
+  --fontsize-40p: 0.4em;
+  --fontsize-30p: 0.3em;
+  --fontsize-20p: 0.2em;
+  --fontsize-10p: 0.1em;
 
   /* ============ Border Radius Variables ============ */
   --br-small: 4px;
@@ -266,7 +284,7 @@ a:active {
   border-radius: 0.20rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: var(--fontsize-normal);
+  font-size: var(--fontsize-100p);
   font-family: Rubik, sans-serif;
   font-optical-sizing: auto;
 }
