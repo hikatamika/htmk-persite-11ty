@@ -83,12 +83,10 @@ export default function (eleventyConfig) {
     return `<a href="mailto:${email}">${email}</a>`
   }
   );
-
   eleventyConfig.addShortcode("emailLinkPair", async function emailLink(email) {
     return `<a href="mailto:${email}">`
   }
   );
-
   eleventyConfig.addShortcode("endEmailLinkPair", async function emailLink() {
     return `</a>`
   }
@@ -121,6 +119,26 @@ export default function (eleventyConfig) {
     return `</a>`
   }
   );
+
+  //Link Button Set
+  eleventyConfig.addShortcode("linkButtonSet", async function linkButtonSet() {
+    return `<div class="link-buttons">`
+  });
+  eleventyConfig.addShortcode("linkButtonSetColumn", async function linkButtonSet() {
+    return `<div class="link-buttons link-buttons-column">`
+  });
+  eleventyConfig.addShortcode("linkButtonSetFw", async function linkButtonSet() {
+    return `<div class="link-buttons link-buttons-fw">`
+  });
+  eleventyConfig.addShortcode("linkButton", async function linkButton(linkBtnLabel, linkBtnLink) {
+    return `<a href="${linkBtnLink}" target="_blank"><button>${linkBtnLabel}</button></a>`
+  });
+  eleventyConfig.addShortcode("linkButtonSetGrow", async function linkButtonSetGrow() {
+    return `<div class="link-buttons link-buttons-grow">`
+  });
+  eleventyConfig.addShortcode("endLinkButtonSet", async function endLinkButtonSet() {
+    return `</div>`
+  });
   
   /* ==========
   Filters
