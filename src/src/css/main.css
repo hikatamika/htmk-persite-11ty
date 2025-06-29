@@ -267,7 +267,7 @@ a:active {
   cursor: pointer;
   font-weight: 600;
   font-size: var(--fontsize-normal);
-  font-family: "Rubik", sans-serif;
+  font-family: Rubik, sans-serif;
   font-optical-sizing: auto;
 }
 
