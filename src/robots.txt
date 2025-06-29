@@ -1,6 +1,15 @@
-User-agent: ia_archiver
-Disallow: /
+# www.robotstxt.org/
 
+# Hrmm…
+User-agent: *
+Disallow:
+
+# Internet Archive. I need my cringe to die with me.
+User-agent: ia_archiver
+Disallow: /notes/
+Disallow: /status/
+
+# Slop Machines
 User-agent: AI2Bot
 User-agent: Ai2Bot-Dolma
 User-agent: aiHitBot
