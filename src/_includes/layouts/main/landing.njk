@@ -27,7 +27,7 @@
     <div id="siteBox">
       <main>
         <div class="status-box">
-          <div class="status-icon"><a href="/status" class="status-rss"><img src="/src/img/hika-status.webp" alt="Hika Icon"></a></div>
+          <div class="status-icon"><a href="/statuses" class="status-rss"><img src="/src/img/hika-status.webp" alt="Hika Icon"></a></div>
           <div class="status-message">
           {% set firstStatus = collections.statuses | reverse | first %}
           <span><b>{{ firstStatus.date | JStoRelative | makeTitleCase }}:</b> {{ firstStatus.content | safe }}</span>

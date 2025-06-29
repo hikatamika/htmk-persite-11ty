@@ -108,7 +108,7 @@
       {
         "lvl2Item": "statuses",
         "lvl2Label": "Statuses",
-        "lvl2Link": "/status",
+        "lvl2Link": "/statuses",
         "hasLvl3Items": false
       }
     ]
