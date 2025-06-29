@@ -8,6 +8,7 @@ pagination:
   alias: statuses
 ---
 
+<div class="pagi-navi pagi-navi-top">{% include "blocks/pagi-navi.njk" %}</div>
 <div class="status-roll">
   {% for status in statuses | reverse %}
     <div class="status-box">
@@ -22,3 +23,4 @@ pagination:
     </div>
   {% endfor %}
 </div>
+<div class="pagi-navi pagi-navi-bottom">{% include "blocks/pagi-navi.njk" %}</div>

@@ -497,6 +497,35 @@ h1 + .rss-header, h2 + .rss-header, h3 + .rss-header, h4 + .rss-header, h5 + .rs
   margin-block-start: 0;
 }
 
+.pagi-navi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: var(--fontsize-130p);
+  font-weight: 600;
+}
+
+.pagi-navi > div {
+  display: flex;
+  gap: 0 var(--spacing-10);
+}
+
+.pagi-navi a {
+  text-decoration: none;
+}
+
+.pagi-navi-top a {
+  margin-block-end: var(--spacing-10);
+}
+
+.pagi-navi-bottom a {
+  margin-block-start: var(--spacing-10);
+}
+
+.pagi-navi-inactive {
+  display: none;
+}
+
 .status-roll {
   display: flex;
   flex-flow: column nowrap;
