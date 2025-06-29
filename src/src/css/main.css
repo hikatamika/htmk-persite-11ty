@@ -133,6 +133,7 @@ textarea {
   --color-hk-deeper-magenta: #A30051;
   --color-hk-mid-pink: #E866A6;
   --color-hk-light-pink: #F9C;
+  --color-hk-white-pink: #ffecff;
   --color-hk-deep-blue: #0095d7;
   --color-hk-mid-blue: #5cc1f1;
   --color-hk-light-blue: #8bd8ff;
@@ -523,6 +524,87 @@ h1 + .rss-header, h2 + .rss-header, h3 + .rss-header, h4 + .rss-header, h5 + .rs
 }
 
 .pagi-navi-inactive {
+  display: none;
+}
+
+.note-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.note-icon-box, .note-message-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.note-icon-box {
+  padding-inline: var(--spacing-10);
+}
+
+.note-icon img {
+  border-radius: 100%;
+  width: var(--spacing-30);
+  height: auto;
+}
+
+.note-message-box {
+  flex-grow: 1;
+}
+
+.note-message-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.note-message-author span {
+  color: var(--color-hk-deep-purple);
+  font-family: Saira, sans-serif;
+  font-weight: 650;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: var(--fontsize-120p);
+}
+
+.note-message-time {
+  font-weight: 500;
+}
+
+.note-message-time a {
+  text-decoration: none;
+}
+
+.note-message {
+  display: inline;
+  margin-block-end: var(--spacing-10);
+}
+
+.note-tag-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.note-tag-icon {
+  margin-right: var(--spacing-05);
+  color: var(--color-hk-deep-purple);
+}
+
+.tag-block {
+  background-color: var(--color-hk-white-pink);
+  color: var(--color-hk-magenta);
+  border-radius: var(--spacing-10);
+  padding: var(--spacing-025) var(--spacing-07);
+}
+
+.note-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.notes-roll hr:last-child {
   display: none;
 }
 
