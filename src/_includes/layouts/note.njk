@@ -2,7 +2,20 @@
 layout: /layouts/main/main.njk
 ---
 
-<div class="pagi-navi pagi-navi-top">{% include "blocks/pagi-navi.njk" %}</div>
+{% set previousPost = collections.notes | getPreviousCollectionItem %}
+{% set nextPost = collections.notes | getNextCollectionItem %}
+<div class="pagi-navi pagi-navi-top">
+  <div>
+    <a href="{{ previousPost.url }}"
+       {% if not previousPost %}class="pagi-navi-inactive"{% endif %}><span><i class="fa-solid fa-angle-left"></i>&nbsp;Prev:</span></a>
+  </div>
+  <div>
+    <a href="{{ nextPost.url }}"
+       {% if not nextPost %}class="pagi-navi-inactive"{% endif %}><span>Next&nbsp;<i class="fa-solid fa-angle-right"></i></span></a>
+  </div>
+</div>
+{# {{ previousPost.url | log }}
+{{ nextPost.url | log }} #}
 <div class="notes-roll">
   <div class="note-box">
     <div class="note-icon-box">
@@ -50,4 +63,13 @@ layout: /layouts/main/main.njk
     </div>
   </div>
 </div>
-<div class="pagi-navi pagi-navi-bottom">{% include "blocks/pagi-navi.njk" %}</div>
+<div class="pagi-navi pagi-navi-bottom">
+  <div>
+    <a href="{{ previousPost.url }}"
+       {% if not previousPost %}class="pagi-navi-inactive"{% endif %}><span><i class="fa-solid fa-angle-left"></i>&nbsp;Prev:</span></a>
+  </div>
+  <div>
+    <a href="{{ nextPost.url }}"
+       {% if not nextPost %}class="pagi-navi-inactive"{% endif %}><span>Next&nbsp;<i class="fa-solid fa-angle-right"></i></span></a>
+  </div>
+</div>
