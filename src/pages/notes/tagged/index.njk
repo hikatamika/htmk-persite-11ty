@@ -1,0 +1,10 @@
+---
+pagination:
+  data: noteTagIndex
+  size: 1
+  alias: noteTag
+permalink: "/notes/tagged/{{ noteTag.tag | slugify }}/index.html"
+layout: "layouts/notes-tagged.njk"
+eleventyComputed:
+  title: "Notes Tagged: {{ noteTag.tag }}"
+---

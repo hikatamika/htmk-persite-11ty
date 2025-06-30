@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/main/main.njk",
+  "tag": "index"
+}

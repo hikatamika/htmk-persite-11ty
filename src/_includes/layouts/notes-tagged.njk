@@ -1,0 +1,11 @@
+---
+layout: /layouts/main/main.njk
+---
+<div class="pagi-navi pagi-navi-top">{% include "blocks/pagi-navi.njk" %}</div>
+<div class="notes-roll">
+  {% set taggedNotes = collections.notes | taxonomy("data.noteTags", page.pagination.alias ) %}
+  {% for note in taggedNotes | reverse %}
+    {% include "blocks/notes-roll.njk" %}
+  {% endfor %}
+</div>
+<div class="pagi-navi pagi-navi-bottom">{% include "blocks/pagi-navi.njk" %}</div>
