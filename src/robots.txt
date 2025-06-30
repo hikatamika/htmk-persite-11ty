@@ -7,7 +7,8 @@ Disallow:
 # Internet Archive. I need my cringe to die with me.
 User-agent: ia_archiver
 Disallow: /notes/
-Disallow: /status/
+Disallow: /note/
+Disallow: /statuses/
 
 # Slop Machines
 User-agent: AI2Bot
