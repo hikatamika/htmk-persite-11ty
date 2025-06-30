@@ -13,3 +13,7 @@
 
 #Minis
 *.min.*
+
+#Content
+/src/blocks/status
+/src/notes

@@ -20,6 +20,9 @@ export const config = {
 };
 
 export default function (eleventyConfig) {
+  // Don't follow GitIgnore
+  eleventyConfig.setUseGitIgnore(false);
+  
   // Copy assets
   {
     eleventyConfig.addPassthroughCopy("src/src/css/**/*.min.css");
