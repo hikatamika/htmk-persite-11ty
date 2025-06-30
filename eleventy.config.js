@@ -165,10 +165,22 @@ export default function (eleventyConfig) {
     "fullDateToYear", (date) => DateTime.fromJSDate(date).toFormat('kkkk')
   )
   eleventyConfig.addFilter(
+    "JStoDateMed", (date) => DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED)
+  )
+  eleventyConfig.addFilter(
+    "ISOtoDateMed", (date) => DateTime.fromISO(date).toLocaleString(DateTime.DATE_MED)
+  )
+  eleventyConfig.addFilter(
     "JStoDateTimeMed", (date) => DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_MED)
   )
   eleventyConfig.addFilter(
     "ISOtoDateTimeMed", (date) => DateTime.fromISO(date).toLocaleString(DateTime.DATETIME_MED)
+  )
+  eleventyConfig.addFilter(
+    "JStoTimeSimp", (date) => DateTime.fromJSDate(date).toLocaleString(DateTime.TIME_SIMPLE)
+  )
+  eleventyConfig.addFilter(
+    "ISOtoTimeSimp", (date) => DateTime.fromISO(date).toLocaleString(DateTime.TIME_SIMPLE)
   )
   eleventyConfig.addFilter(
     "JStoTimezone", (date) => DateTime.fromJSDate(date).toFormat('ZZZZ')

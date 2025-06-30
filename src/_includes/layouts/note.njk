@@ -1,0 +1,53 @@
+---
+layout: /layouts/main/main.njk
+---
+
+<div class="pagi-navi pagi-navi-top">{% include "blocks/pagi-navi.njk" %}</div>
+<div class="notes-roll">
+  <div class="note-box">
+    <div class="note-icon-box">
+      <div class="note-icon">
+        <a href="/" class="status-rss">
+          <img src="/src/img/hika-note.webp" alt="Hika Icon">
+        </a>
+      </div>
+    </div>
+    <div class="note-message-box">
+      <div class="note-message-header">
+        <div class="note-message-author">
+          <span>{{ nameStrings.authorName }}</span>
+        </div>
+      </div>
+      <div class="note-message">
+        <span>{{ content | safe }}</span>
+      </div>
+      <div class="note-message-date-time">
+        <span>{{ date | JStoDateMed }} at {{ date | JStoTimeSimp }}</span>
+      </div>
+      {% if noteTags %}
+        <div class="note-tag-box">
+          <div class="note-tag-icon">
+            <i class="fa-solid fa-hashtag fa-fw fa-lg"></i>
+          </div>
+          <div class="note-tag-roll">
+            {% for noteTag in noteTags %}
+              <a href="/notes/tagged/{{ noteTag | slugify }}">
+                <div class="tag-block">
+                  <span>{{ noteTag }}</span>
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {# <div class="note-controls">
+        <a href="{{ permalink }}">
+          <div>
+            <i class="fa-solid fa-link fa-fw fa-lg"></i>
+          </div>
+        </a>
+      </div> #}
+    </div>
+  </div>
+</div>
+<div class="pagi-navi pagi-navi-bottom">{% include "blocks/pagi-navi.njk" %}</div>
