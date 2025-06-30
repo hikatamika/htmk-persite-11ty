@@ -544,12 +544,14 @@ h1 + .rss-header, h2 + .rss-header, h3 + .rss-header, h4 + .rss-header, h5 + .rs
 
 .note-icon img {
   border-radius: 100%;
-  width: var(--spacing-30);
+  border: 1px solid var(--color-hk-mid-background);
+  width: var(--spacing-40);
   height: auto;
 }
 
 .note-message-box {
   flex-grow: 1;
+  padding-inline-end: var(--spacing-10);
 }
 
 .note-message-header {
@@ -571,13 +573,21 @@ h1 + .rss-header, h2 + .rss-header, h3 + .rss-header, h4 + .rss-header, h5 + .rs
   font-weight: 500;
 }
 
-.note-message-time a {
+.note-message-time a, .note-tag-roll a {
   text-decoration: none;
 }
 
 .note-message {
   display: inline;
-  margin-block-end: var(--spacing-10);
+}
+
+.note-message + div {
+  margin-block-start: var(--spacing-07);
+}
+
+.note-message-date-time {
+  color: var(--color-hk-dry-purple);
+  font-weight: 600;
 }
 
 .note-tag-box {
@@ -589,6 +599,11 @@ h1 + .rss-header, h2 + .rss-header, h3 + .rss-header, h4 + .rss-header, h5 + .rs
 .note-tag-icon {
   margin-right: var(--spacing-05);
   color: var(--color-hk-deep-purple);
+}
+
+.note-tag-roll {
+  display: flex;
+  gap: var(--spacing-07);
 }
 
 .tag-block {
