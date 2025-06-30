@@ -35,6 +35,7 @@
     {%- elif post.data.tags == "page" -%}
       {{ post.url | htmlBaseUrl(metadata.base) }}
     {%- else -%}
+      {{ post.url | htmlBaseUrl(metadata.base) }}
     {%- endif -%}
   {%- endset -%}
   <entry>
@@ -50,7 +51,15 @@
   <id>{{- absolutePostUrl -}}</id>
   <content type="html">
     {%- if post.data.tags == "page" -%}
-      <a href="{{- absolutePostUrl -}}">Page Updated. Click to view.</a>
+      <a href="{{- absolutePostUrl -}}"><b>Page Updated! Click to view.</b></a>
+    {%- elif post.data.tags == "notes" -%}
+      <p>{{ post.content | renderTransforms(post.data.page, metadata.base) }}</p>
+      <p>
+        <b>Tagged As:</b>
+        {%- for tag in post.data.noteTags %}
+          {{ tag }}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </p>
     {%- else -%}
       {{- post.content | renderTransforms(post.data.page, metadata.base) -}}
     {%- endif -%}
