@@ -1,0 +1,17 @@
+{
+  "sectionLinkBase": "/astramix",
+  "sectionLinks": [
+    {
+      "section": "About",
+      "url": ""
+    },
+    {
+      "section": "Archive",
+      "url": "/archive"
+    },
+    {
+      "section": "RSS",
+      "url": "/astramix-rss"
+    }
+  ]
+}
