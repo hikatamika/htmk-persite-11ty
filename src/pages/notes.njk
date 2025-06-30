@@ -11,48 +11,7 @@ pagination:
 <div class="pagi-navi pagi-navi-top">{% include "blocks/pagi-navi.njk" %}</div>
 <div class="notes-roll">
   {% for note in notes | reverse %}
-    <div class="note-box">
-      <div class="note-icon-box">
-        <div class="note-icon">
-          <a href="/" class="status-rss">
-            <img src="/src/img/hika-note.webp" alt="Hika Icon">
-          </a>
-        </div>
-      </div>
-      <div class="note-message-box">
-        <div class="note-message-header">
-          <div class="note-message-author">
-            <span>{{ nameStrings.authorName }}</span>
-          </div>
-          <div class="note-message-time">
-            <a href="{{ note.url }}" title="{{ note.date | JStoDateTimeMed }} {{ note.date | JStoTimezone }}"><span>{{ note.date | JStoRelative | makeTitleCase }}</span></a>
-          </div>
-        </div>
-        <div class="note-message">
-          <span>{{ note.content | safe }}</span>
-        </div>
-        {% if note.data.noteTags %}
-        <div class="note-tag-box">
-          <div class="note-tag-icon">
-            <i class="fa-solid fa-hashtag fa-fw fa-lg"></i>
-          </div>
-          <div class="note-tag-roll">
-            {% for noteTag in note.data.noteTags %}
-              <a href="/"><div class="tag-block"><span>{{ noteTag }}</span></div></a>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
-        {# <div class="note-controls">
-          <a href="{{ note.permalink }}">
-            <div>
-              <i class="fa-solid fa-link fa-fw fa-lg"></i>
-            </div>
-          </a>
-        </div> #}
-      </div>
-    </div>
-    <hr>
+    {% include "blocks/notes-roll.njk" %}
   {% endfor %}
 </div>
 <div class="pagi-navi pagi-navi-bottom">{% include "blocks/pagi-navi.njk" %}</div>
