@@ -9,7 +9,7 @@
 /dict
 
 #11ty Output
-/_site
+/public_html
 
 #Minis
 *.min.*
