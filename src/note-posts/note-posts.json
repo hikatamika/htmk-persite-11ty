@@ -1,0 +1,12 @@
+{
+  "tags": ["note", "posts"],
+  "layout": "/layouts/main/note.njk",
+  "eleventyComputed": {
+    "title": "Note: {{ date | JStoDateTimeMed }} {{ date | JStoTimezone }}",
+    "permalink": "note/{{ page.date | JStoInt }}/"
+  },
+  "pageScripts": {
+    "swiper": true,
+    "photoswipe": true
+  }
+}

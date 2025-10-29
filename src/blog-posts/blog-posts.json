@@ -1,0 +1,10 @@
+{
+  "layout": "layouts/main/main-blog.njk",
+  "tags": ["blog", "posts"],
+  "pageScripts": {
+    "photoswipe": true
+  },
+  "eleventyComputed": {
+    "permalink": "/blog/{{ date | JStoYYYYMMDD }}-{{blogSlug}}/"
+  }
+}

@@ -1,0 +1,5 @@
+{%- if not tagHide -%}
+<span><a href="{{ link.linkURL }}" target="_blank">
+    <span>{{ link.linkLabel }}</span></a>{%- if link.linkEmojis -%}<span> ({{link.linkEmojis}})</span>
+    {%- endif -%}</span>
+{%- endif -%}

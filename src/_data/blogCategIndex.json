@@ -1,0 +1,32 @@
+[
+  {
+    "categKey": "archive",
+    "categLabel": "Archive",
+    "categDesc": "Holding onto things in a drawer. Often from sunsetting platforms."
+  },
+  {
+    "categKey": "cinema",
+    "categLabel": "Cinema",
+    "categDesc": "Longform video posts."
+  },
+  {
+    "categKey": "memories",
+    "categLabel": "Memories",
+    "categDesc": "Recording things that happened for looking back on later!"
+  },
+  {
+    "categKey": "news",
+    "categLabel": "News",
+    "categDesc": "More important news and updates."
+  },
+  {
+    "categKey": "thoughts",
+    "categLabel": "Thoughts",
+    "categDesc": "Thinking out loud like Ed Sheeran."
+  },
+  {
+    "categKey": "tutorials",
+    "categLabel": "Tutorials",
+    "categDesc": "Educational tutorial posts."
+  }
+]

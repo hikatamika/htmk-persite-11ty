@@ -1,8 +1,0 @@
-{
-  "tags": "notes",
-  "layout": "/layouts/note.njk",
-  "eleventyComputed": {
-    "title": "Note: {{ date | JStoDateTimeMed }} {{ date | JStoTimezone }}",
-    "permalink": "note/{{ page.date | JStoInt }}/index.html"
-  }
-}

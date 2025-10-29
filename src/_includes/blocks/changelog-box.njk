@@ -1,0 +1,24 @@
+<div id="changelogBox">
+  <ul>
+  {% for update in collections.changelogs | reverse %}
+    {% if loop.index < 26 %}
+    <li>
+      <div class="changelog-update">
+        <span class="changelog-header">{{ update.page.date | JStoDateTimeMed }} {{ update.page.date | JStoTimezone }}</span><br><span>{{ update.content | safe }}</span>
+      </div>
+      {% if update.data.changelogLink %}
+        <div class="changelog-link block-spaced">
+          <a href="{{ update.data.changelogLink }}">
+            <button class="">
+              <span class="btn-engage-icon"><i class="fa-solid fa-link fa-fw"></span></i>
+              <span>Go! </span>
+            </button>
+          </a>
+        </div>
+      {% endif %}
+      </li>
+    <hr class="changelog-sep">
+    {% endif %}
+  {% endfor %}
+  </ul>
+</div>

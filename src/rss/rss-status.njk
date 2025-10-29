@@ -2,6 +2,9 @@
 {
   "permalink": "status.xml",
   "eleventyExcludeFromCollections": true,
+  "eleventyImport": {
+    "collections": ["statuses"]
+  },
   "metadata": {
     "title": "HK★TMK | Statuses",
     "description": "Statuses from HikaTamika.com",
@@ -17,20 +20,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
-  <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
-  <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
+  <link href="{{ permalink | htmlBaseUrl(nameStrings.siteBaseURL) }}" rel="self" />
+  <link href="{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}statuses" />
   <updated>{{ collections.statuses | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ metadata.base}}</id>
+  <id>rss-status_{{ nameStrings.siteBaseURL }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
   {%- for post in collections.statuses | reverse %}
+  {% if loop.index0 < 10 %}
   <entry>
     <title>{{- post.data.title -}}</title>
-    <link href="{{ metadata.base }}" />
+    <link href="{{ nameStrings.siteBaseURL }}statuses/" />
     <updated>{{ post.date | dateToRfc3339 }}</updated>
-    <id>{{ metadata.base }}</id>
-    <content type="html">{{ post.content | renderTransforms(post.data.page, metadata.base) }}</content>
+    <id>rss-status_{{ nameStrings.siteBaseURL }}statuses/_{{ post.date | JStoInt }}</id>
+    <content type="html">{{- post.data.statusEmoji }}&#160;–&#160;{{- post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) -}}</content>
   </entry>
+  {% endif %}
   {%- endfor %}
 </feed>

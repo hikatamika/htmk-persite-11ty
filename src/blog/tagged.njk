@@ -1,0 +1,121 @@
+---
+layout: /layouts/main/main.njk
+pagination:
+  data: collections.blogTagList
+  size: 1
+  alias: blogTag
+permalink: "/blog/tagged/{{ blogTag | slugify }}/"
+eleventyComputed:
+  title: "Blog Posts Tagged: {{ blogTag | makeUpperFirst }}"
+---
+<nav class="pagi-navi pagi-navi-top meta-select-navi">
+  <div>
+    <ul class="section-links">
+      <a href="../../"><li>◀◀ Back</li></a>
+    </ul>
+  </div>
+  <div class="meta-select">
+    <div>
+      <span class="dropdown-select-label">Categories:</span>
+      <select name="categSelect" id="categSelect" onChange="window.location.href=this.value">
+        <option value="#">Category Select</option>
+        {% for categ in collections.blogCategList %}
+          <option value="/blog/category/{{ categ | slugify }}">
+          {% for item in blogCategIndex %}
+            {% if item.categKey == categ %}
+              {{ item.categLabel }}
+            {% endif %}
+          {% endfor %}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <span class="dropdown-select-label">Tags:</span>
+      <select name="tagSelect" id="tagSelect" onChange="window.location.href=this.value">
+          <option value="#">Tag Select</option>
+        {% for tag in collections.blogTagList %}
+          <option value="/blog/tagged/{{ tag | slugify }}/">#{{ tag | makeUpperFirst  }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+</nav>
+{# <div class="pagi-navi pagi-navi-top">
+  {% include "blocks/pagi-navi-l.njk" %}
+  <div class="meta-select">
+    <div>
+      <span class="dropdown-select-label">Categories:</span>
+      <select name="categSelect" id="categSelect" onChange="window.location.href=this.value">
+        <option value="#">Category Select</option>
+        {% for categ in collections.blogCategList %}
+          <option value="/blog/category/{{ categ | slugify }}">
+          {% for item in blogCategIndex %}
+            {% if item.categKey == categ %}
+              {{ item.categLabel }}
+            {% endif %}
+          {% endfor %}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <span class="dropdown-select-label">Tags:</span>
+      <select name="tagSelect" id="tagSelect" onChange="window.location.href=this.value">
+          <option value="#">Tag Select</option>
+        {% for tag in collections.blogTagList %}
+          <option value="/blog/tagged/{{ tag | slugify }}/">#{{ tag | makeUpperFirst  }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+  {% include "blocks/pagi-navi-r.njk" %}
+</div> #}
+<ul class="postroll">
+  {% set postrollSet = collections.blog | includes("data.blogTags", blogTag ) %}
+  {% for blogPost in postrollSet | reverse %}
+    {% if blogTag in blogPost.data.blogTags %}
+      <h2><a href="{{ blogPost.url }}">{{ blogPost.data.title }}</a></h2>   
+      <div class="postroll-meta">
+        <div class="postroll-date postroll-meta-label"><i class="fa-solid fa-calendar fa-fw"></i><span>{{ blogPost.date | JStoYMD }}</span></div>
+        <div class="postroll-categs postroll-meta-label">
+          <i class="fa-solid fa-list fa-fw"></i>
+          <ul>
+            {% for categ in blogCategIndex %}
+              {% if categ.categKey in blogPost.data.blogCategs %}
+                <li><a href="/blog/category/{{ categ.categLabel | slugify }}"><span>{{ categ.categLabel }}</span></a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <p>
+        {{ blogPost.content | excerpt | safe }}
+      </p>
+      {% if blogPost.data.blogTags %}
+        <div class="blog-tag-box">
+          <div class="blog-tag-icon">
+            <i class="fa-solid fa-hashtag fa-fw fa-lg"></i>
+          </div>
+          <div class="blog-tag-roll">
+            {% for blogTag in blogPost.data.blogTags %}
+              <a href="/blog/tagged/{{ blogTag | slugify }}">
+                <div class="tag-block">
+                  <span>{{ blogTag | makeUpperFirst  }}</span>
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      <div class="block-text-right">
+        <span><a href="{{ blogPost.url }}">Read More ▶▶</a></span>
+      </div>
+      <hr class="hr-33">
+    {% endif %}
+  {% endfor %}
+</ul>
+{# <div class="pagi-navi pagi-navi-bottom">
+  {% include "blocks/pagi-navi-l.njk" %}
+  {% include "blocks/pagi-navi-r.njk" %}
+</div> #}

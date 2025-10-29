@@ -1,0 +1,85 @@
+---
+layout: /layouts/main/main.njk
+title: "Bluesky"
+redirect_from: [/about/bluesky-tags,/bluesky/]
+sectionLinks:
+  - section: My Posting
+    url: "#sec-myposting"
+  - section: My Tags
+    url: "#sec-mytags"
+  - section: My Feeds
+    url: "#sec-myfeeds"
+---
+
+<h2 id="sec-myposting">My Posting</h2>
+<ul>
+  <li>
+    I've become a little bit {% extLink "NoSurf", "https://nosurf.net/about/" %}-pilled, so expect replies in the evenings and feed-catchups on Wednesdays and Saturdays. Thanks for understanding!
+  </li>
+  <li>
+    I might be a bit slow/hesitant to follow back. I don't want my TL to move at Information Firehose™ lightspeed.
+  </li>
+  {# <li>
+    <span>My account here is not a tidy stream of Just <b>My</b> Art™. If you'd like a cleaner stream of my art, consider subscribing to my {% intLink "Gallery RSS Feed", "/gallery.xml" %} or following me on an art-centric site like {% extLink "SheezyArt", "https://sheezy.art/" %}</span>
+    <ul>
+      <li>One might notice that instead of following them back, I may have put them into a list for a feed I scroll on occasion!</li>
+    </ul>
+  </li> #}
+  <li>One might notice that instead of following them back, I may have put them into a list for a feed I scroll on occasion!</li>
+  {# <li>
+    With the way bills/freelancing come for me, I often post a big art piece, and then resort to yap-posts for weeks to a month. I'm trying to fix this by making/sharing concept art more instead of just illustrations, but if you'd like to see more art from me consider supporting me for as low as $1 on my {% extLink "Ko-Fi", "https://ko-fi.com/hikatamika/" %} so I stop making bored work-posts.
+  </li> #}
+  <li>
+    I focus on creating OC art cause I have quite a few original stories I'd like to tell, and a finite life-span. <em>If I make a fanart that you like, <strong>don't get too used to it.</strong></em>
+  </li>
+  <li>
+    I love boosting other artist's OC art on my {% extLink "main account", "https://bsky.app/profile/hikatamika.com" %}!! That's just the kind of media I'd like to spotlight on there. I have a side account that I don't want people to swarm for fandom things.
+  </li>
+  <li>
+    Because I wanna be a YA/late-teen author, I won't reblog NSFW or (some) suggestive art much, if at all. It'd be irresponsible of me to try and attract a teen audience and then put adult content within their reach. Even though there's nothing inherently wrong with adult content.
+  </li>
+  {# <li>
+    I tend to yap in small pieces about random things. If you'd like to subscribe to my longer and more edited thoughts, consider subscribing to my {% intLink "Blog RSS Feed", "/blog.xml" %}
+  </li> #}
+  {# <li>
+    I dislike doing it at much as you dislike reading it: but sometimes I'll post/share about Politics™ and actionable things we can do about them. Especially politics that effect creatives, or people in marginalized groups I care about. I cannot wait 'til we make the world better and I don't have to post about them anymore.
+  </li> #}
+  <li>I'm neurodivergent and I speak on things in good faith, so please gently pull me aside if I misstep instead of giving me a {% extLink "The Reason You Suck Speech", "https://tvtropes.org/pmwiki/pmwiki.php/Main/TheReasonYouSuckSpeech" %}.</li>
+</ul>
+<h2 id="sec-mytags">My Tags</h2>
+{# <p>Here’s a list of tags I use for my posts on BlueSky! They’ll help you navigate my nonstop posts on there.</p> #}
+<h3>General Posting</h3>
+{% if blueskyTags.general %}
+  {% linkRollCenter %}
+    {% for tag in blueskyTags.general %}
+      {% include "blocks/bsky-tag-roll.njk" %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h3>Creative</h3>
+<h4>Art</h4>
+{% if blueskyTags.creative.art %}
+  {% linkRollCenter %}
+    {% for tag in blueskyTags.creative.art %}
+      {% include "blocks/bsky-tag-roll.njk" %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h4>Music</h4>
+{% if blueskyTags.creative.music %}
+  {% linkRollCenter %}
+    {% for tag in blueskyTags.creative.music %}
+      {% include "blocks/bsky-tag-roll.njk" %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h3>Projects/Characters</h3>
+{% if blueskyTags.projects %}
+  {% linkRollCenter %}
+    {% for tag in blueskyTags.projects %}
+      {% include "blocks/bsky-tag-roll.njk" %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h2 id="sec-myfeeds">My Feeds</h2>
+<p>If you're looking for my feeds, they're in the {% intLink "Computer Room!", "/bluesky-feeds" %}</p>

@@ -1,0 +1,16 @@
+---
+layout: /layouts/main/main.njk
+title: "Art Gallery: 2025"
+eleventyExcludeFromCollections: true
+permalink: false
+---
+{% set categPie = galleryCategIndex.year %}
+<span class="heading-subtitle">{{ galleryCategIndex.year[0].categDesc }}</span>
+
+{% include "blocks/categ-navi.njk" %}
+<div>
+</div>
+<div class="gallery-thumb-grid block-spaced">
+  {% set galleryCateg = "2025" %}
+  {% include "blocks/gallery-thumb-grid-roll.njk" %}
+</div>

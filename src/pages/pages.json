@@ -1,4 +1,4 @@
 {
-  "permalink": "/{{ page.fileSlug | slugify }}/index.html",
+  "permalink": "/{{ page.fileSlug | slugify }}/",
   "tags": "page"
 }

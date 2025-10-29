@@ -1,0 +1,113 @@
+---
+layout: /layouts/main/main.njk
+title: My Links
+sectionLinks:
+  - section: MicroBlogging
+    url: "#sec-microblogging"
+  - section: Gallery Sites
+    url: "#sec-gallery"
+  - section: Social Blogging
+    url: "#sec-socialblogging"
+  - section: Video Sites
+    url: "#sec-video"
+  - section: Other
+    url: "#sec-other"
+---
+<p>
+  <a href="/links">You can find my home-made link tree, here!</a>
+</p>
+<h2>Legend</h2>
+<ul class="text-roll block-spaced block-text-center">
+  <span>🌟 – fave</span>
+  <span>💬 – chatty/active</span>
+  <span>📨 – crossposting</span>
+  <span>🙈 – I don’t scroll</span>
+  <span>💤 – quiet/lurking</span>
+  <span>🐌 – slow updates</span>
+  <span>⚠️ – considering inactivity</span>
+  <span>💀 – inactive/archive</span>
+  <span>🧟 – I could come back…</span>
+  <span>🤖 – ai nonsense</span>
+  <span>🪦 – site shut down</span>
+</ul>
+<h2 id="sec-microblogging">MicroBlogging</h2>
+{% if textLinks.myLinksMicroBlogging %}
+  {% linkRollCenter %}
+    {% for link in textLinks.myLinksMicroBlogging %}
+      {% if not link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h2 id="sec-gallery">Gallery Sites</h2>
+{% if textLinks.myLinksGallery %}
+  {% linkRollCenter %}
+    {% for link in textLinks.myLinksGallery %}
+      {% if not link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h2 id="sec-socialblogging">Social Blogging</h2>
+{% if textLinks.myLinksSocialBlogging %}
+  {% linkRollCenter %}
+    {% for link in textLinks.myLinksSocialBlogging %}
+      {% if not link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h2 id="sec-video">Video Sites</h2>
+{% if textLinks.myLinksVideo %}
+  {% linkRollCenter %}
+    {% for link in textLinks.myLinksVideo %}
+      {% if not link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h2 id="sec-other">Other</h2>
+{% if textLinks.myLinksOther %}
+  {% linkRollCenter %}
+    {% for link in textLinks.myLinksOther %}
+      {% if not link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+<h2 class="wp-block-heading">Graveyard</h2>
+{% linkRollCenter %}
+  {% if textLinks.myLinksMicroBlogging %}
+    {% for link in textLinks.myLinksMicroBlogging %}
+      {% if link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if textLinks.myLinksGallery %}
+    {% for link in textLinks.myLinksGallery %}
+      {% if link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if textLinks.myLinksSocialBlogging %}
+    {% for link in textLinks.myLinksSocialBlogging %}
+      {% if link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if textLinks.myLinksOther %}
+    {% for link in textLinks.myLinksOther %}
+      {% if link.linkGrave %}
+        {% include "blocks/my-links-roll.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endlinkRollCenter %}

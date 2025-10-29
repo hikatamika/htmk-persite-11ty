@@ -1,0 +1,50 @@
+---json
+{
+  "permalink": "gallery.xml",
+  "eleventyExcludeFromCollections": true,
+  "eleventyImport": {
+    "collections": ["gallery"]
+  },
+  "metadata": {
+    "title": "HK★TMK | Art & Design",
+    "description": "Art & Design from HikaTamika.com",
+    "language": "en",
+    "base": "https://example.com/",
+    "author": {
+      "name": "HK★TMK"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <link href="{{ permalink | htmlBaseUrl(nameStrings.siteBaseURL) }}" rel="self" />
+  <link href="{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}" />
+  <updated>{{ collections.note | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>rss-gallery_{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  {%- for post in collections.gallery | reverse %}
+  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(nameStrings.siteBaseURL) }}{% endset %}
+  {% if loop.index0 < 10 %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>rss-gallery_{{ absolutePostUrl }}_{{ post.date | JStoInt }}</id>
+    <content type="html">
+      <a href="{{ absolutePostUrl }}"><p><b>New Gallery Upload:</b> {{ post.data.title }}</p></a>
+      <img src="{{ post.data.gallThumbImg | htmlBaseUrl(nameStrings.siteBaseURL) }}" alt="{{ post.data.gallThumbAlt }}" style="max-width: 100%; height: auto;"/>
+      {# {{ post.data.gallThumbImg | log }} #}
+      <p>
+        <b>Categorized Under:</b>
+        {{ post.data.galleryCategs.year }}, {{ post.data.galleryCategs.subject }}, {{ post.data.galleryCategs.medium }}
+      </p>
+    </content>
+  </entry>
+  {% endif %}
+  {%- endfor %}
+</feed>

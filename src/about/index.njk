@@ -1,0 +1,35 @@
+---
+layout: /layouts/main/main.njk
+title: "About Me"
+---
+<div class="block-text-center">
+<p>"Hika/Tam" | ↑21 | {% extLink "Neutrois", "https://simple.wikipedia.org/wiki/Neutrois" %} | {% extLink nameStrings.myPronouns, "https://en.pronouns.page/@hikatamika" %} | {% extLink "Time Zone: PT", "https://time.is/PT" %}</p>
+</div>
+<hr class="hr-50">
+<p>Tryna make this page more… cozy, hold on.</p>
+<p>I’m Hika ({{ nameStrings.myPronouns }}), an art-blerd in the Bay Area who’s been on the internet since like 2002 (granted I was a fetus on Neopets). Somehow I’m still here! I love art, comics, the internet, and storytelling through original characters, so that’s most of what I get up to. Though I’m trying to get better at fanart… in moderation it could help me build an audience for my OCs. </p>
+<p>I’m an artist and graphic designer both professionally and for personal expression. I also dabble in 3D art, but mainly to support and enhance my 2D art. 😳 My passion is drawing comics, and I’ve done a lot of personal and professional webdesign in pursuit of sharpening my skills for designing sites to host webcomics… All that to say, I do quite a lot, creatively.</p>
+<p>I am mainly online to have a good time, so, please be nice to me, haha. I’m quite sensitive. Anyway…</p>
+<p>This site is made for friends &amp; netizens to learn about what I like and what I make! {% emailLinkPair nameStrings.contactEmail %}I have a professional portfolio elsewhere,{% endemailLinkPair %} but I wanted to make this site to help bring back the casual, personal, website. I think a lot of artists have left them behind despite needing them now, more than ever.</p>
+<hr class="hr-50">
+{% if blinkies15020.aboutMeBlinkies %}
+  {% buttonRollCenter %}
+    {% for blinkie in blinkies15020.aboutMeBlinkies %}
+      {% include "blocks/blinkie-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons8831.aboutMeButtons %}
+  {% buttonRollCenter %}
+    {% for button in webButtons8831.aboutMeButtons %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if stamps9956.aboutMeStamps %}
+  {% buttonRollCenter %}
+    {% for stamp in stamps9956.aboutMeStamps %}
+      {% include "blocks/stamp-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}

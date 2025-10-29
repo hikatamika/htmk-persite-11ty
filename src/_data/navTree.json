@@ -6,15 +6,15 @@
     "hasLvl2Items": true,
     "lvl2Items": [
       {
-        "lvl2Item": "the lab",
+        "lvl2Item": "theLab",
         "lvl2Label": "The Lab",
         "lvl2Link": "/the-lab",
         "hasLvl3Items": false
       },
       {
-        "lvl2Item": "library",
-        "lvl2Label": "Library",
-        "lvl2Link": "/library",
+        "lvl2Item": "spinnerRack",
+        "lvl2Label": "Spinner Rack",
+        "lvl2Link": "/spinner-rack",
         "hasLvl3Items": false
       },
       {
@@ -44,12 +44,12 @@
           {
             "lvl3Item": "bskyFeeds",
             "lvl3Label": "Bluesky Feeds",
-            "lvl3Link": "/bluesky-feeds"
+            "lvl3Link": "/computer-room/bluesky-feeds"
           },
           {
             "lvl3Item": "utau",
             "lvl3Label": "UTAU",
-            "lvl3Link": "/utau"
+            "lvl3Link": "/computer-room/utau"
           }
         ]
       },
@@ -64,7 +64,7 @@
   {
     "lvl1Item": "about",
     "lvl1Label": "About",
-    "lvl1Link": "/#",
+    "lvl1Link": "/about",
     "hasLvl2Items": true,
     "lvl2Items": [
       {
@@ -74,16 +74,34 @@
         "hasLvl3Items": false
       },
       {
-        "lvl2Item": "bskyTags",
-        "lvl2Label": "My Bluesky Tags",
-        "lvl2Link": "/bluesky-tags",
+        "lvl2Item": "touFaq",
+        "lvl2Label": "T.O.U. / F.A.Q.",
+        "lvl2Link": "/about/faq",
         "hasLvl3Items": false
       },
       {
-        "lvl2Item": "touFaq",
-        "lvl2Label": "T.O.U. / F.A.Q.",
-        "lvl2Link": "/art-tou-faq",
+        "lvl2Item": "aboutSite",
+        "lvl2Label": "About the Site",
+        "lvl2Link": "/about/site",
         "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "social",
+        "lvl2Label": "Social",
+        "lvl2Link": "/#",
+        "hasLvl3Items": true,
+        "lvl3Items": [
+          {
+            "lvl3Item": "dni",
+            "lvl3Label": "DNI",
+            "lvl3Link": "/about/dni"
+          },
+          {
+            "lvl3Item": "bskyAbout",
+            "lvl3Label": "Bluesky",
+            "lvl3Link": "/about/bluesky"
+          }
+        ]
       }
     ]
   },
@@ -122,13 +140,25 @@
       {
         "lvl2Item": "guestbook",
         "lvl2Label": "Guestbook",
-        "lvl2Link": "/guestbook",
+        "lvl2Link": "https://hikatamika.atabook.org/",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "wavebox",
+        "lvl2Label": "Ask/React Box",
+        "lvl2Link": "https://wavebox.me/wave/9zdpazgbm43lecc5/",
         "hasLvl3Items": false
       },
       {
         "lvl2Item": "mailingList",
         "lvl2Label": "Mailing List",
         "lvl2Link": "/mailing-list",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "email",
+        "lvl2Label": "Email",
+        "lvl2Link": "mailto:hellohika@hikatamika.com",
         "hasLvl3Items": false
       }
     ]
@@ -148,15 +178,41 @@
       {
         "lvl2Item": "linksOut",
         "lvl2Label": "Links Out",
-        "lvl2Link": "/links-out",
-        "hasLvl3Items": false
+        "lvl2Link": "/#",
+        "hasLvl3Items": true,
+        "lvl3Items": [
+          {
+            "lvl3Item": "resources",
+            "lvl3Label": "Resources",
+            "lvl3Link": "/resources"
+          },
+          {
+            "lvl3Item": "neighbors",
+            "lvl3Label": "Neighbors",
+            "lvl3Link": "/neighbors"
+          }
+        ]
       }
     ]
   },
   {
     "lvl1Item": "rss",
     "lvl1Label": "RSS",
-    "lvl1Link": "/feed.xml",
-    "hasLvl2Items": false
+    "lvl1Link": "/#",
+    "hasLvl2Items": true,
+    "lvl2Items": [
+      {
+        "lvl2Item": "rssAll",
+        "lvl2Label": "All Updates",
+        "lvl2Link": "/feed.xml",
+        "hasLvl3Items": false
+      },
+      {
+        "lvl2Item": "rssIndex",
+        "lvl2Label": "Feed Directory",
+        "lvl2Link": "/rss",
+        "hasLvl3Items": false
+      }
+    ]
   }
 ]

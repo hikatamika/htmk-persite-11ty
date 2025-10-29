@@ -1,0 +1,112 @@
+{
+  "general": [
+    {
+      "tagLabel": "ArtShopLoot"
+    },
+    {
+      "tagLabel": "Blog"
+    },
+    {
+      "tagLabel": "CurrentlyLooping",
+      "tagHide": true
+    },
+    {
+      "tagLabel": "HKmediaBlog",
+      "tagHide": true
+    },
+    {
+      "tagLabel": "HKsnaps",
+      "tagContext": "Photos"
+    },
+    {
+      "tagLabel": "KoFi"
+    },
+    {
+      "tagLabel": "OverheardOutdoors",
+      "tagHide": true
+    },
+    {
+      "tagLabel": "RealHikaQuotes",
+      "tagHide": true
+    },
+    {
+      "tagLabel": "WonderfulWebcomics",
+      "tagHide": true
+    }
+  ],
+  "creative": {
+    "art": [
+      {
+        "tagLabel": "3DArt"
+      },
+      {
+        "tagLabel": "Art"
+      },
+      {
+        "tagLabel": "ArtProcess",
+        "tagHide": true
+      },
+      {
+        "tagLabel": "ArtReveal",
+        "tagHide": true
+      },
+      {
+        "tagLabel": "ArtShort",
+        "tagHide": true
+      },
+      {
+        "tagLabel": "ComicDev"
+      },
+      {
+        "tagLabel": "Doodle"
+      },
+      {
+        "tagLabel": "Sketch"
+      },
+      {
+        "tagLabel": "Sketchbook"
+      },
+      {
+        "tagLabel": "Webcomics"
+      },
+      {
+        "tagLabel": "Zines"
+      }
+    ],
+    "music": [
+      {
+        "tagLabel": "UTAU"
+      },
+      {
+        "tagLabel": "VocalSynth"
+      }
+    ],
+    "other": [
+      {
+        "tagLabel": "WebDev"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "tagLabel": "HKTMK_OC"
+    },
+    {
+      "tagLabel": "DivOpsLXNX"
+    },
+    {
+      "tagLabel": "DH_Diaries"
+    },
+    {
+      "tagLabel": "Somnius"
+    },
+    {
+      "tagLabel": "HKTMK_Art",
+      "tagContext": "Sona Art"
+    },
+    {
+      "tagLabel": "HikaMart",
+      "tagHide": true
+    }
+  ]
+}

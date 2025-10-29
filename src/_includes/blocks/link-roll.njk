@@ -1,0 +1,8 @@
+{%- if not tagHide -%}
+<span><a href="{{ link.linkURL }}" target="_blank">
+    <span>{{ link.linkLabel }}</span>
+    {%- if link.linkIsNSFW -%}
+      <span>(🔞)</span>
+    {%- endif -%}
+  </a></span>
+{%- endif -%}

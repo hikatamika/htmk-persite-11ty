@@ -1,0 +1,95 @@
+---
+layout: /layouts/main/main.njk
+title: "The Lab"
+
+sectionLinks:
+  - section: "Lab Log"
+    url: "#sec-labLog"
+  - section: "Demi-Human Diaries: Fear of Falling"
+    url: "#sec-dhdfof"
+  - section: "Shop Update"
+    url: "#shopUpdate"
+  - section: "Divine Operatives: Lux;Nox"
+    url: "#lxnx"
+---
+<p>
+  Welcome to The Lab! This is where you can keep track of how far along I am on some of my projects. If you would like to help push these projects towards the finish line you can support me by <b>{% extLink "donating or joining my memberships on my Ko-Fi", "https://ko-fi.com/hikatamika/" %}</b>!
+</p>
+<section class="block-spaced-2-5x">
+  <div class="rss-header">
+    <h2 id="sec-labLog">Lab Log</h2>
+    <a href="/lablog.xml" target="_blank"><i class="fa-solid fa-rss fa-xl"></i></a>
+  </div>
+  <p>My microblog-sized Dev Diary. Just tracking my efforts, here. Deeper insight into the development process for my projects may be distributed through {% extLink "my Ko-Fi page", "https://ko-fi.com/hikatamika" %} or through {% extLink "zines", "/spinner-rack" %}.</p>
+  {% include "blocks/lablog-box.njk" %}
+</section>
+<hr class="hr-33">
+<section class="block-spaced-2-5x">
+  <h2 id="sec-dhdfof">Demi-Human Diaries: Fear of Falling</h2>
+  <p>
+    Probably the shortest story that I can manage to make right now, haha. Which is why I want to make this my first comic. 12 short chapters that form the origin story of my angel OCs, Hevel and Aziel. Though: if I can, I will, make it even shorter.
+  </p>
+  {% labProgressList %}
+    {% labProgressBar "dhdStoryOut", "Story Outline", 12, 12 %}
+    {% labProgressBar "dhdStoryOutAeon", "Move Story Outline from Scrivener to Aeon Timeline", 2, 12 %}
+    {% labProgressBar "dhdThumbs", "Thumbnails", 1, 12 %}
+    {% labProgressBar "dhdScript", "(Finalized) Scripts", 1, 12 %}
+    {% labProgressBar "dhdBoards", "Storyboards", 1, 202 %}
+    {% labProgressBar "dhdLttr", "Lettering", 0, 202 %}
+    {% labProgressBar "dhdSktch", "Sketches", 0, 202 %}
+    {% labProgressBar "dhdInk", "Inks", 0, 202 %}
+    {% labProgressBar "dhdTone", "Tones", 0, 202 %}
+  {% endlabProgressList %}
+</section>
+<section class="block-spaced-2-5x">
+  <h2 id="shopUpdate">Shop Update</h2>
+  <p>
+    A little somethin' somethin' to revitalize interest in my shop when the time is right. That said, I just like making things.
+  </p>
+  <p>
+    There's progress on every item. And I'm telling myself I don't need to add more, I just need to bring all these to completion.
+  </p>
+  {% labProgressList %}
+    {% labProgressBar "suBookmarks", "Bookmark Art", 5, 5 %}
+    {% labProgressBar "suPcSketches", "Photocard Sketches", 3, 4 %}
+    {% labProgressBar "suPcInks", "Photocard Inks", 0, 4 %}
+    {% labProgressBar "suPcColors", "Photocard Colors", 0, 4 %}
+    {% labProgressBar "suPcFb", "Photocard Full-Bodies (Back)", 0, 4 %}
+  {% endlabProgressList %}
+  {% labCheckList %}
+    {% labCheckItem "suSz23Cover", "SketchZine'23 Cover", false %}
+    {% labCheckItem "suSz23Pg", "SketchZine'23 Pages", true %}
+    {% labCheckItem "suSz24Cover", "SketchZine'24 Cover", false %}
+    {% labCheckItem "suSz24Pg", "SketchZine'24 Pages", true %}
+    {% labCheckItem "suBmToploader", "TopLoader Deco-Kit Design", true %}
+    {% labCheckItem "suBmToploadPhotos", "TopLoader Deco-Kit Product Photos", false %}
+    {% labCheckItem "suBmPhotos", "Bookmark Product Photos", false %}
+    {% labCheckItem "suPcPhotos", "Photocard Product Photos", false %}
+  {% endlabCheckList %}
+</section>
+<section class="block-spaced">
+  <h2 id="ocTcg">ocTCG</h2>
+  <p>
+    An OC party-game anyone can add to! (And an excuse for my peers to make cards I can collect).
+  </p>
+  {% labCheckList %}
+    {% labCheckItem "octcgRuleDraft", "Draft Game Rules", true %}
+    {% labCheckItem "octcgCardLayout", "Design Card Layout", true %}
+    {% labCheckItem "octcgRuleBeta", "Beta-Test Game Rules", false %}
+    {% labCheckItem "octcgCardTemplateFront", "Make Card Template (Front)", false %}
+    {% labCheckItem "octcgCardTemplateBack", "Make Card Template (Back)", false %}
+  {% endlabCheckList %}
+</section>
+<section class="block-spaced">
+  <h2 id="lxnx">Divine Operatives: Lux;Nox</h2>
+  <p>
+    My magical girl story. Very big, very long, very deep, and very daunting. I know how it all goes in 27,000+ words of brain-dump, and I am tidying the outline.
+  </p>
+  <p>
+    Very much a project to be launched in the <em><strong>future</strong></em> while I craft a lifestyle that affords me the security and time to make pages for a comic this large. Ideally I afford the time with some good, but not <em>all-time-consuming</em> freelance. I could also benefit from your support on <b>{% extLink "Ko-Fi", "https://ko-fi.com/hikatamika/" %}</b>, if you have the spare change!
+  </p>
+  {% labProgressList %}
+    {% labProgressBar "lxnxWordVomit", "WHOLE-STORY.DOC /lh", 6, 6 %}
+    {% labProgressBar "lxnxOutline", "Tidier Outline", 2, 60 %}
+  {% endlabProgressList %}
+</section>

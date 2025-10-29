@@ -1,7 +1,12 @@
 {% if button.buttonLink %}
   <a href="{{ button.buttonLink }}" target="_blank">
 {% endif %}
-    <img src="/src/img/web-buttons/{{ button.buttonImg }}" alt="{{ button.buttonAlt }}">
+    <div>
+      <img src="/src/img/web-buttons/{{ button.buttonImg }}" alt="{{ button.buttonAlt }} button">
+      {% if button.buttonIsNSFW %}
+        <span>(← 🔞)</span>
+      {% endif %}
+    </div>
 {% if button.buttonLink %}
   </a>
 {% endif %}

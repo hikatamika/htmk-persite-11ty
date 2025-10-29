@@ -1,0 +1,79 @@
+:root {
+  --pfp-size: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#linksCover {
+  min-height: 160px;
+}
+
+#linksCover img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#linksPFPs {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-07);
+  width: 100%;
+  /* transform: translateY(-50%); */
+  margin-top: calc( -1 * ( var(--pfp-size) / 2 ) );
+  z-index: 999;
+}
+
+#linksPFPs img {
+  width: var(--pfp-size);
+  height: var(--pfp-size);
+  box-sizing: border-box;
+  vertical-align: bottom;
+  border-radius: 100%;
+  border-color: white;
+  border-style: solid;
+}
+
+#linksIconRoll {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-07);
+}
+
+main {
+  margin-top: -25px;
+  margin: var(--spacing-10);
+}
+
+.links-bio > * {
+  display: block;
+}
+
+h1 {
+  color: white;
+  margin-block: 0;
+}
+
+#linksButtonRow > .link-buttons {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#linksButtonRow > .link-buttons > a {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+#linksButtonRow > .link-buttons > a > button {
+  width: 100%;
+}

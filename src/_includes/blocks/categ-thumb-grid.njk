@@ -1,0 +1,43 @@
+<div class="gallery-categ-box">
+        {% if categ in gallCategArrays.years %}
+          <a href="{{ galleryCategIndex.year[loop.index0].categLabel | slugify }}">
+        {% elif categ in gallCategArrays.subjects %}
+          <a href="{{ galleryCategIndex.subject[loop.index0].categLabel | slugify }}">
+        {% elif categ in gallCategArrays.mediums %}
+          <a href="{{ galleryCategIndex.medium[loop.index0].categLabel | slugify }}">
+        {% endif %}
+    <div class="gallery-categ-label">
+      <span>
+        {% if categ in gallCategArrays.years %}
+          {% if galleryCategIndex.year[loop.index0].categStub %}
+            {{galleryCategIndex.year[loop.index0].categStub}}
+          {% else %}
+          {{ galleryCategIndex.year[loop.index0].categLabel }}
+          {% endif %}
+        {% elif categ in gallCategArrays.subjects %}
+          {% if galleryCategIndex.subject[loop.index0].categStub %}
+            {{galleryCategIndex.subject[loop.index0].categStub}}
+          {% else %}
+          {{ galleryCategIndex.subject[loop.index0].categLabel }}
+          {% endif %}
+        {% elif categ in gallCategArrays.mediums %}
+          {% if galleryCategIndex.medium[loop.index0].categStub %}
+            {{galleryCategIndex.medium[loop.index0].categStub}}
+          {% else %}
+          {{ galleryCategIndex.medium[loop.index0].categLabel }}
+          {% endif %}
+        {% endif %}
+      </span>
+    </div>
+    {% if categ in gallCategArrays.years %}
+      {% set newestYear = collections.artGallery | includes("data.galleryCategs.year", categ) | excludes("data.galleryScraps", true) | last %}
+      <img src="{{ newestYear.data.gallThumbImg }}" alt="'{{ galleryCategIndex.year[loop.index0].categLabel }}' Category Thumbnail"  class="gallery-categ-img" style="object-position:{{ newestYear.data.gallThumbFocus }}">
+    {% elif categ in gallCategArrays.subjects %}
+      {% set newestSubj = collections.artGallery | includes("data.galleryCategs.subject", categ) | excludes("data.galleryScraps", true) | last %}
+      <img src="{{ newestSubj.data.gallThumbImg }}" alt="'{{ galleryCategIndex.subject[loop.index0].categLabel }}' Category Thumbnail"  class="gallery-categ-img" style="object-position:{{ newestSubj.data.gallThumbFocus }}">
+    {% elif categ in gallCategArrays.mediums %}
+      {% set newestMedium = collections.artGallery | includes("data.galleryCategs.medium", categ) | excludes("data.galleryScraps", true) | last %}
+      <img src="{{ newestMedium.data.gallThumbImg }}" alt="'{{ galleryCategIndex.medium[loop.index0].categLabel }}' Category Thumbnail"  class="gallery-categ-img" style="object-position:{{ newestMedium.data.gallThumbFocus }}">
+    {% endif %} 
+  </a>
+</div>

@@ -1,0 +1,96 @@
+---
+layout: /layouts/links/links.njk
+title: Links
+
+coverImg:
+  img: "pink.webp"
+  imgAlt: "Hika's Lux Pink social media banner"
+
+linksPFPs:
+  - PFP:
+    img: "hika-chibi.webp"
+    imgAlt: "Chibi Hika"
+  - PFP:
+    img: "hevel.webp"
+    imgAlt: "Hevel"
+  - PFP:
+    img: "hika.webp"
+    imgAlt: "Hika"
+linksIconRoll:
+  - button:
+    icon: house-chimney
+    site: Website
+    url: "https://hikatamika.com/"
+  - button:
+    icon: kofi
+    site: Ko-Fi
+    url: "https://ko-fi.com/hikatamika"
+  - button:
+    icon: bluesky
+    site: Bluesky
+    url: "https://bsky.app/profile/hikatamika.com"
+  - button:
+    icon: wavebox
+    site: WaveBox
+    url: "https://wavebox.me/wave/9zdpazgbm43lecc5/"
+  - button:
+    icon: sheezyart
+    site: SheezyArt
+    url: "https://sheezy.art/hikatamika"
+  - button:
+    icon: youtube
+    site: YouTube
+    url: "https://youtube.com/@HikaTamika"
+  - button:
+    icon: twitch
+    site: twitch
+    url: "https://twitch.tv/HikaTamika"
+linksButtonRoll:
+  - button:
+    icon: kofi
+    label: "Exclusive Art & Posts"
+    url: "https://ko-fi.com/hikatamika/tiers"
+  - button:
+    icon: images
+    label: "Art Gallery"
+    url: "/art-gallery"
+  - button:
+    icon: briefcase
+    label: "Portfolio"
+    url: "https://hikatamika.art"
+  - button:
+    icon: rss
+    label: "Post Notifications"
+    url: "/rss"
+  - button:
+    icon: envelope
+    label: "Mailing List"
+    url: "/mailing-list"
+---
+
+{% set latestArt = collections.artGallery | last %}
+{% set latestGallery = collections.gallery | last %}
+{% set latestBlog = collections.blog | last %}
+{% set latestPost = collections.posts | last %}
+<div class="block-vert-align block-text-center block-spaced links-bio">
+  <h1>@HikaTamika</h1>
+  <span>The OC Art/Comics/Zines guy that loves to yap. ★ 🏳️‍🌈✌🏿 ★ They/He</span>
+</div>
+<div id="linksIconRoll">
+  {% for button in linksIconRoll %}
+    {% linksIconButton button.icon, button.site, button.url %}
+  {% endfor %}
+</div>
+<div id="linksButtonRow" class="block-item-center">
+  {% linkButtonSet %}
+    {% linksTextButton "paintbrush", "Latest Art/Design", latestGallery.url %}
+    {% linksTextButton "comment", "Latest Post", latestPost.url %}
+  {% endlinkButtonSet %}
+</div>
+<div id="linksButtonRoll">
+  {% linkButtonSetFw %}
+  {% for button in linksButtonRoll %}
+    {% linksTextButton button.icon, button.label, button.url %}
+  {% endfor %}
+{% endlinkButtonSet %}
+</div>

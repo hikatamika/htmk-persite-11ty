@@ -1,0 +1,25 @@
+{
+  "webcomiOngoing": [
+    {
+      "buttonImg": "bcb-banner.png",
+      "buttonAlt": "Bittersweet Candy Bowl",
+      "buttonLink": "https://www.bittersweetcandybowl.com/"
+    },
+    {
+      "buttonImg": "keeping-time.jpg",
+      "buttonAlt": "keeping time",
+      "buttonLink": "https://www.keepingtimecomic.com/",
+      "buttonIsNSFW": true
+    },
+    {
+      "buttonImg": "kuroshouri.png",
+      "buttonAlt": "kuro shouri",
+      "buttonLink": "https://kuroshouri.com/"
+    },
+    {
+      "buttonImg": "moonlight-apparition.jpg",
+      "buttonAlt": "moonlight apparition",
+      "buttonLink": "https://moonlightapparition.com/"
+    }
+  ]
+}

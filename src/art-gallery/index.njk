@@ -1,0 +1,31 @@
+---
+layout: /layouts/main/main-rss.njk
+rssLink: "/gallery.xml"
+title: "Art Gallery"
+redirect_from: [/galleries/art-gallery]
+---
+<h2>Year</h2>
+<div class="gallery-categ-grid">
+{# {{ gallCategArrays.years | log }} #}
+{% for categ in gallCategArrays.years %}
+  {% include "blocks/categ-thumb-grid.njk" %}
+{% endfor %}
+</div>
+<h2>Subject</h2>
+<div class="gallery-categ-grid">
+{% for categ in gallCategArrays.subjects %}
+  {% include "blocks/categ-thumb-grid.njk" %}
+{% endfor %}
+</div>
+<h2>Medium</h2>
+<div class="gallery-categ-grid">
+{% for categ in gallCategArrays.mediums %}
+  {% include "blocks/categ-thumb-grid.njk" %}
+{% endfor %}
+</div>
+<h2>Scraps</h2>
+<div class="gallery-categ-grid">
+{% for categ in gallScrapArray %}
+  {% include "blocks/scraps-thumb-grid.njk" %}
+{% endfor %}
+</div>

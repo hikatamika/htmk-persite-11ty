@@ -1,0 +1,21 @@
+{%- if pageScripts.swiper -%}
+  <script src="/src/swiper/swiper-bundle.min.js"></script>
+  <script src="/src/js/hk-swiper.min.js" type="module" defer></script>
+{%- endif -%}
+{% if pageScripts.photoswipe %}
+  <script src="/src/js/vendor/photoswipe.esm.min.js" type="module" defer></script>
+  <script src="/src/js/vendor/photoswipe-lightbox.esm.min.js" type="module" defer></script>
+  <script src="/src/js/vendor/photoswipe-dynamic-caption-plugin.esm.min.js" type="module" defer></script>
+  <script src="/src/js/hk-photoswipe.min.js" type="module" defer></script>
+{% endif %}
+{% if pageScripts.isotope %}
+  <script src="/src/js/vendor/isotope.pkgd.min.js" type="module" defer></script>
+  <script src="/src/js/hk-isotope.min.js" type="module" defer></script>
+  <script>
+    $(window).load(function(){
+        // All images, css style sheets and external resources are loaded!
+        iso.layout();
+    });
+  </script>
+{% endif %}
+<script src="/src/js/app.min.js"></script>

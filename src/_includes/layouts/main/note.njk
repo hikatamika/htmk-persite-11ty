@@ -1,0 +1,75 @@
+---
+layout: /layouts/main/main.njk
+---
+
+{% set firstItem = collections.note | first %}
+{% set previousItem = collections.note | getPreviousCollectionItem %}
+{% set nextItem = collections.note | getNextCollectionItem %}
+{% set lastItem = collections.note | last %}
+<div class="pagi-navi pagi-navi-top">
+  {% include "blocks/colle-navi-l.njk" %}
+  {% include "blocks/colle-navi-r.njk" %}
+</div>
+{# {{ previousPost.url | log }}
+{{ nextPost.url | log }} #}
+<div class="notes-roll block-spaced">
+  <div class="note-box">
+    <div class="note-icon-box">
+      <div class="note-icon">
+        <a href="/" class="status-rss">
+          <img src="/src/img/hika-note.webp" alt="Hika Icon">
+        </a>
+      </div>
+    </div>
+    <div class="note-message-box">
+      <div class="note-message-header">
+        <div class="note-message-author">
+          <span>{{ nameStrings.authorName }}</span>
+        </div>
+      </div>
+      <div class="note-message">
+        {{ content | safe }}
+      </div>
+      {% if noteSlides %}
+        <div class="note-img-box photoswipeable">
+          {# {{ noteSlides | length | log }} #}
+          {% for slide in noteSlides %}
+            <a href="{{ slide.img }}" class="photoswipee noteimgs-{{ noteSlides | length }}img img-{{ loop.index }}"  data-pswp-width="{{ slide.imgWidth }}" data-pswp-height="{{ slide.imgHeight }}">
+              <img src="{{ slide.img }}" alt="{{ slide.imgAlt }}" class="">
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="note-message-date-time">
+        <span>{{ date | JStoDateMed }} at {{ date | JStoTimeSimp }} {{ date | JStoTimezone }}</span>
+      </div>
+      {% if noteTags %}
+        <div class="note-tag-box">
+          <div class="note-tag-icon">
+            <i class="fa-solid fa-hashtag fa-fw fa-lg"></i>
+          </div>
+          <div class="note-tag-roll">
+            {% for noteTag in noteTags %}
+              <a href="/notes/tagged/{{ noteTag | slugify }}">
+                <div class="tag-block">
+                  <span>{{ noteTag | makeUpperFirst  }}</span>
+                </div>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+      {# <div class="note-controls">
+        <a href="{{ permalink }}">
+          <div>
+            <i class="fa-solid fa-link fa-fw fa-lg"></i>
+          </div>
+        </a>
+      </div> #}
+    </div>
+  </div>
+</div>
+<div class="pagi-navi pagi-navi-bottom">
+  {% include "blocks/colle-navi-l.njk" %}
+  {% include "blocks/colle-navi-r.njk" %}
+</div>

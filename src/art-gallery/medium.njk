@@ -1,0 +1,28 @@
+---
+layout: /layouts/main/main.njk
+eleventyComputed:
+  title: "Art Gallery: {{ categPagi.categLabel | safe  }}"
+pagination:
+  data: galleryCategIndex.medium
+  size: 1
+  alias: categPagi
+permalink: "/art-gallery/{{ categPagi.categLabel | slugify }}/"
+---
+<span class="heading-subtitle">{{ categPagi.categDesc | safe  }}</span>
+
+<div>
+  <nav>
+    <ul class="section-links">
+      <a href="../"><li>◀◀ Back</li></a>
+      {% for item in galleryCategIndex.medium %}
+        <a href="../{{ item.categLabel | slugify }}"><li>{{ item.categLabel }}</li></a>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
+
+<div id="galleryGrid" class="fadeable gallery-thumb-grid block-spaced">
+  {% set galleryCateg = categPagi.categKey %}
+  {% set categCollection = collections.artGallery | includes("data.galleryCategs.medium", galleryCateg) | excludes("data.galleryScraps", true) | reverse %}
+  {% include "blocks/gallery-thumb-grid-roll.njk" %}
+</div>

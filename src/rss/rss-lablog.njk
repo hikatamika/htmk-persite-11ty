@@ -1,0 +1,51 @@
+---json
+{
+  "permalink": "lablog.xml",
+  "eleventyExcludeFromCollections": true,
+  "eleventyImport": {
+    "collections": ["lablogs"]
+  },
+  "metadata": {
+    "title": "HK★TMK | Lablogs",
+    "description": "Website updates from HikaTamika.com",
+    "language": "en",
+    "base": "https://example.com/",
+    "author": {
+      "name": "HK★TMK"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <link href="{{ permalink | htmlBaseUrl(nameStrings.siteBaseURL) }}" rel="self" />
+  <link href="{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}the-lab" />
+  <updated>{{ collections.lablogs | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>rss-lablog_{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+  {%- for post in collections.changelogs | reverse %}
+  {%- set absolutePostUrl %}{{nameStrings.siteBaseURL}}{{ post.data.statusLink}}{% endset %}
+  {% if loop.index0 < 10 %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    {% if post.data.statusLink %}
+      <link href="{{ post.data.statusLink }}" />
+    {% else %}
+      <link href="{{ nameStrings.siteBaseURL }}" />
+    {% endif %}
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>rss-changelog_{{ nameStrings.siteBaseURL }}_{{ post.date | JStoInt }}</id>
+    <content type="html">
+      {{- post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) -}}
+      {% if post.data.changelogLink %}
+        <p><b><a href="{{ nameStrings.siteBaseURL.slice(0, -1) }}{{ post.data.changelogLink }}">Click here to see what updated!</a></b></p>
+      {% endif %}
+    </content>
+  </entry>
+  {% endif %}
+  {%- endfor %}
+</feed>

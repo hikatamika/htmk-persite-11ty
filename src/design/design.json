@@ -1,0 +1,13 @@
+{
+  "layout": "/layouts/main/main-gallery.njk",
+  "tags": ["designGallery", "gallery"],
+  "eleventyComputed": {
+    "gridLink": "{{ page.filePathStem }}"
+  },
+  "pageScripts": {
+    "swiper": true,
+    "photoswipe": true
+  },
+  "eleventyExcludeFromCollections": true,
+  "permalink": false
+}

@@ -1,0 +1,11 @@
+{% if not blinkie.blinkieHide %}  
+  {% if blinkie.blinkieLink %}
+    <a href="{{ blinkie.blinkieLink }}" target="_blank">
+  {% endif %}
+      <div>
+        <img src="/src/img/blinkies/{{ blinkie.blinkieImg }}" alt="{{ blinkie.blinkieAlt }} blinkie">
+      </div>
+  {% if blinkie.blinkieLink %}
+    </a>
+  {% endif %}
+{% endif %}

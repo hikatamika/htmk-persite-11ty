@@ -1,0 +1,8 @@
+{% if not tag.tagHide %}  
+  <span>
+    <a href="https://bsky.app/hashtag/{{ tag.tagLabel }}?author=hikatamika.com" target="_blank" class="bsky-tag-link"><span>#{{ tag.tagLabel }}</span></a>
+    {%- if tag.tagContext -%}
+      <span>&nbsp;({{ tag.tagContext }})</span>
+    {%- endif -%}
+  </span>
+{% endif %}

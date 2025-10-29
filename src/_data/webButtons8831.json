@@ -1,25 +1,292 @@
-[
-  {
-    "buttonImg": "censor-14c.gif",
-    "buttonAlt": "Censorship Panda Web 14 Rating",
-    "buttonCateg": "home",
-    "buttonLink": "https://www.mabsland.com/Adoption.html"
-  },
-  {
-    "buttonImg": "bookmark.gif",
-    "buttonAlt": "Bookmark this Page",
-    "buttonCateg": "home"
-  },
-  {
-    "buttonImg": "built-with-eleventy.gif",
-    "buttonAlt": "Built with Eleventy",
-    "buttonCateg": "home",
-    "buttonLink": "https://chrisburnell.com/note/eleventy-animated-88x31/"
-  },
-  {
-    "buttonImg": "vs-code.png",
-    "buttonAlt": "Built with Visual Studio Code",
-    "buttonCateg": "home",
-    "buttonLink": "https://jspaint.app/about"
-  }
-]
+{
+  "aboutMeButtons": [
+    {
+      "buttonImg": "no-ai.png",
+      "buttonAlt": "No AI: Create, Don't Scrape"
+    },
+    {
+      "buttonImg": "cohost.gif",
+      "buttonAlt": "I Was On CoHost",
+      "buttonLink": "https://mykocalico.neocities.org/"
+    },
+    {
+      "buttonImg": "graphic-design.png",
+      "buttonAlt": "Graphic Design"
+    },
+    {
+      "buttonImg": "blog-now.png",
+      "buttonAlt": "Blogging Now",
+      "buttonLink": "/blog"
+    },
+    {
+      "buttonImg": "journal-now.png",
+      "buttonAlt": "Journaling Now"
+    },
+    {
+      "buttonImg": "local-alien.gif",
+      "buttonAlt": "Local Alien",
+      "buttonLink": "https://frammyjammy.neocities.org/"
+    },
+    {
+      "buttonImg": "mail-now.png",
+      "buttonAlt": "Mailing Lists Now",
+      "buttonLink": "/mailing-list"
+    },
+    {
+      "buttonImg": "rss-now.png",
+      "buttonAlt": "RSS Now",
+      "buttonLink": "/rss"
+    }
+  ],
+  "comicRes": [
+    {
+      "buttonImg": "coop-button.gif",
+      "buttonAlt": "Cartoonist Cooperative",
+      "buttonLink": "https://cartoonist.coop/"
+    }
+  ],
+  "DMsArt": [
+    {
+      "buttonImg": "blog-now.png",
+      "buttonAlt": "Blogging Now",
+      "buttonLink": "/blog"
+    },
+    {
+      "buttonImg": "mail-now.png",
+      "buttonAlt": "Mailing Lists Now",
+      "buttonLink": "/mailing-list"
+    },
+    {
+      "buttonImg": "rss-now.png",
+      "buttonAlt": "RSS Now",
+      "buttonLink": "/rss"
+    }
+  ],
+  "DMsVent": [
+    {
+      "buttonImg": "journal-now.png",
+      "buttonAlt": "Journaling Now"
+    }
+  ],
+  "homeButtons": [
+    {
+      "buttonImg": "censor-14c.gif",
+      "buttonAlt": "Censorship Panda Web 14 Rating",
+      "buttonLink": "https://www.mabsland.com/Adoption.html"
+    },
+    {
+      "buttonImg": "no-ai.png",
+      "buttonAlt": "No AI: Create, Don't Scrape"
+    },
+    {
+      "buttonImg": "bookmark.gif",
+      "buttonAlt": "Bookmark this Page"
+    },
+    {
+      "buttonImg": "mail-now.png",
+      "buttonAlt": "Mailing Lists Now",
+      "buttonLink": "/mailing-list"
+    },
+    {
+      "buttonImg": "rss-now.png",
+      "buttonAlt": "RSS Now",
+      "buttonLink": "/rss"
+    },
+    {
+      "buttonImg": "built-with-eleventy.gif",
+      "buttonAlt": "Built with Eleventy",
+      "buttonLink": "https://chrisburnell.com/note/eleventy-animated-88x31/"
+    },
+    {
+      "buttonImg": "vs-code.png",
+      "buttonAlt": "Built with Visual Studio Code",
+      "buttonLink": "https://jspaint.app/about"
+    }
+  ],
+  "otherResc": [
+    {
+      "buttonImg": "ceasefire-now.gif",
+      "buttonAlt": "Ceasefire Now: Dami Falasteeni",
+      "buttonLink": "https://damifalasteeni.neocities.org/"
+    }
+  ],
+  "perSites": [
+    {
+      "buttonImg": "00010010.gif",
+      "buttonAlt": "18 Dot Org",
+      "buttonLink": "https://00010010.org/"
+    },
+    {
+      "buttonImg": "abstractcactus.gif",
+      "buttonAlt": "AbstractCactus",
+      "buttonLink": "https://abstractcactus.art/"
+    },
+    {
+      "buttonImg": "alexisroyce.png",
+      "buttonAlt": "Alexis Royce",
+      "buttonLink": "https://alexisroyce.neocities.org/",
+      "buttonIsNSFW": true
+    },
+    {
+      "buttonImg": "assbread.png",
+      "buttonAlt": "AssBread",
+      "buttonLink": "https://assbread.com/"
+    },
+    {
+      "buttonImg": "auraluxeart.png",
+      "buttonAlt": "AuraLuxe Art",
+      "buttonLink": "https://auraluxeart.com/"
+    },
+    {
+      "buttonImg": "becca-beean.gif",
+      "buttonAlt": "Becca Beean",
+      "buttonLink": "https://beccabeean.neocities.org/"
+    },
+    {
+      "buttonImg": "cinnamuffbtn.png",
+      "buttonAlt": "Cinnamuff",
+      "buttonLink": "https://cinnamuff.space/"
+    },
+    {
+      "buttonImg": "dexmckinnery.png",
+      "buttonAlt": "Dex McKinnery",
+      "buttonLink": "https://dexmckinnery.com/"
+    },
+    {
+      "buttonImg": "doodlemancy.png",
+      "buttonAlt": "doodlemancy",
+      "buttonLink": "https://doodlemancy.com/"
+    },
+    {
+      "buttonImg": "freakphone.gif",
+      "buttonAlt": "freak phone",
+      "buttonLink": "https://freakphone.net/"
+    },
+    {
+      "buttonImg": "fpbutton.gif",
+      "buttonAlt": "fruit punch",
+      "buttonLink": "https://fruit-punch.neocities.org/"
+    },
+    {
+      "buttonImg": "hiratelier.png",
+      "buttonAlt": "hiratelier",
+      "buttonLink": "https://hiratelier.haliya.net/"
+    },
+    {
+      "buttonImg": "larvapuppy.gif",
+      "buttonAlt": "LarvaPuppy",
+      "buttonLink": "https://larvapuppy.neocities.org/",
+      "buttonIsNSFW": true
+    },
+    {
+      "buttonImg": "literallyfictional.gif",
+      "buttonAlt": "literally fictional",
+      "buttonLink": "https://literallyfictional.neocities.org/"
+    },
+    {
+      "buttonImg": "lunes-archives.gif",
+      "buttonAlt": "Lune's Archives",
+      "buttonLink": "https://luneevenfall.neocities.org/"
+    },
+    {
+      "buttonImg": "lurizon.png",
+      "buttonAlt": "Lurizon",
+      "buttonLink": "https://lurizon.neocities.org/"
+    },
+    {
+      "buttonImg": "marighoul-8831.png",
+      "buttonAlt": "marighoul",
+      "buttonLink": "https://marighoul.com/"
+    },
+    {
+      "buttonImg": "mystsaphyr.png",
+      "buttonAlt": "MystSaphyr",
+      "buttonLink": "https://mystsaphyr.art/"
+    },
+    {
+      "buttonImg": "petrapixel.webp",
+      "buttonAlt": "PetraPixel",
+      "buttonLink": "https://petrapixel.neocities.org/"
+    },
+    {
+      "buttonImg": "rabbit-legs.gif",
+      "buttonAlt": "rabbitlegs",
+      "buttonLink": "https://udomyon.com/",
+      "buttonIsNSFW": true
+    },
+    {
+      "buttonImg": "rkrk-anim.gif",
+      "buttonAlt": "rakuraiku",
+      "buttonLink": "https://rkrk.dev/index.html"
+    },
+    {
+      "buttonImg": "rockybloo.png",
+      "buttonAlt": "RockyBloo",
+      "buttonLink": "https://rockybloo.neocities.org/",
+      "buttonIsNSFW": true
+    },
+    {
+      "buttonImg": "shadsy.png",
+      "buttonAlt": "shadsy dot net",
+      "buttonLink": "https://shadsy.net/"
+    },
+    {
+      "buttonImg": "spiderdraws.jpg",
+      "buttonAlt": "SpiderDraws",
+      "buttonLink": "https://spiderdraws.com/"
+    },
+    {
+      "buttonImg": "symliadoo.png",
+      "buttonAlt": "symliadoo",
+      "buttonLink": "https://symliadoo.com/"
+    },
+    {
+      "buttonImg": "mavisdeluna.gif",
+      "buttonAlt": "The Moon Palace: Mavis De Luna",
+      "buttonLink": "https://mavisdeluna.art/",
+      "buttonIsNSFW": true
+    },
+    {
+      "buttonImg": "torrent-empress.gif",
+      "buttonAlt": "torrent-empress",
+      "buttonLink": "https://torrentempress.neocities.org/",
+      "buttonIsNSFW": true
+    }
+  ],
+  "webcomiGroup": [
+    {
+      "buttonImg": "knifebeetle.gif",
+      "buttonAlt": "KnifeBeetle",
+      "buttonLink": "https://knifebeetle.neocities.org/"
+    }
+  ],
+  "webRescSite": [
+    {
+      "buttonImg": "makeyourownwebsitebanner.gif",
+      "buttonAlt": "Make Your Own Website",
+      "buttonLink": "https://jakechirak.com/howto/makeyourownwebsite/howtohome"
+    },
+    {
+      "buttonImg": "nekoweb.gif",
+      "buttonAlt": "NekoWeb",
+      "buttonLink": "https://nekoweb.org/"
+    },
+    {
+      "buttonImg": "neocitiesorg.gif",
+      "buttonAlt": "NeoCities",
+      "buttonLink": "https://neocities.org/"
+    },
+    {
+      "buttonImg": "petrapixel.webp",
+      "buttonAlt": "PetraPixel",
+      "buttonLink": "https://petrapixel.neocities.org/"
+    }
+  ],
+  "yourWebrings": [
+    {
+      "buttonImg": "smallweb-subway.png",
+      "buttonAlt": "SmallWeb Subway",
+      "buttonLink": "https://gusbus.space/smallweb-subway/"
+    }
+  ]
+}

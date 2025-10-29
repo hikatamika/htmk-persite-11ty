@@ -1,6 +1,54 @@
 [
   {
-    "tag": "test",
-    "description": "Testing things out."
+    "tagKey": "artThoughts",
+    "tagDesc": "Thinkin' about artin'."
+  },
+  {
+    "tagKey": "AIcriticism",
+    "tagDesc": "Ranting about the slop bubble till it bursts."
+  },
+  {
+    "tagKey": "creativeLife",
+    "tagDesc": "The state of trying to make your own creative work. Especially online."
+  },
+  {
+    "tagKey": "diary",
+    "tagDesc": "Heem-heem nonsense."
+  },
+  {
+    "tagKey": "freelanceIndustry",
+    "tagDesc": "The debatably \"real jobs\" that do not require I sell my whole 40-hr soul to the company."
+  },
+  {
+    "tagKey": "indieWeb",
+    "tagDesc": "Thinking about the indieWeb (independent websites outside of social media) movement/revival."
+  },
+  {
+    "tagKey": "liveNoting",
+    "tagDesc": "Happenings that were once live."
+  },
+  {
+    "tagKey": "sitely",
+    "tagDesc": "Stuff that has to do with the webbed site."
+  },
+  {
+    "tagKey": "socMed",
+    "tagDesc": "Social-media related things."
+  },
+  {
+    "tagKey": "test",
+    "tagDesc": "Testing things out."
+  },
+  {
+    "tagKey": "thoughts",
+    "tagDesc": "Thinking out loud like Ed Sheeran."
+  },
+  {
+    "tagKey": "webDev",
+    "tagDesc": "The final form of Netizenship is mastering the ability to claim and terraform your own land."
+  },
+  {
+    "tagKey": "workNoting",
+    "tagDesc": "Yapping about what I'm working on, or just the nature of work in general."
   }
 ]

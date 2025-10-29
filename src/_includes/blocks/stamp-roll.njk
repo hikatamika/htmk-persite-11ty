@@ -1,0 +1,14 @@
+{% if not stamp.stampHide %}
+  {% if stamp.stampLink %}
+    <a href="{{ stamp.stampLink }}" target="_blank">
+  {% endif %}
+    <div>
+      <img src="/src/img/stamps/{{ stamp.stampImg }}" alt="{{ stamp.stampAlt }} stamp">
+      {% if stamp.stampIsNSFW %}
+        <span>(← 🔞)</span>
+      {% endif %}
+    </div>
+  {% if stamp.stampLink %}
+    </a>
+  {% endif %}
+{% endif %}

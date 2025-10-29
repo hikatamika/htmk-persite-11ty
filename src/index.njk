@@ -2,32 +2,116 @@
 layout: /layouts/main/landing.njk
 title: Home
 tags: page
+eleventyImport:
+  collections: ["gallery", "posts"]
 ---
 
+<h2>Heyo!</h2>
+<p>
+  Hi, folks call me Hika ({{ nameStrings.myPronouns }}). I make art, problem-solve design, and write stories. I'm intrigued by magical girls, the supernatural, manga, anime, video games, along with drawing and writing comics for my OCs.
+  <br>
+  Welcome to my Personal Webbed Site™, where I archive my creations and thoughts. You can use the nav menu to get around.
+  <br>
+</p>
+{# <hr class="hr-33"> #}
+{% buttonRollCenter %}
+{% for button in webButtons8831.homeButtons %}
+  {% include "blocks/button-roll.njk" %}
+{% endfor %}
+{% endbuttonRollCenter %}
+<div class="block-spaced block-item-center block-text-center" style="flex-wrap: wrap;">
+  <div>
+    <span>Hits:&nbsp;</span>
+    <!-- FC2 Counter  Starts here -->
+    <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40553855&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40553855&main=1" /></noscript>
+    <!-- FC2 Counter  Ends here -->
+  </div>
+  <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+  <div>
+    <span>Online:&nbsp;</span>
+    <!-- FC2 Counter  Starts here -->
+    <script language="javascript" type="text/javascript" src="//counter1.fc2.com/views.php?id=40553855&main=1"></script><noscript><img src="//counter1.fc2.com/counter_now.php?id=40553855&main=1" /></noscript>
+    <!-- FC2 Counter  Ends here -->
+  </div>
+</div>
+<div>
+  {# Send an Email #}
+  {# Sign my Guestbook? #}
+</div>
+<hr class="hr-33 block-spaced-2x">
+{# "Latest" Box Container #}
+<div class="block-2col block-hero-height">
+  {% set latestGallery = collections.artGallery | last %}
+  {# Latest Art #}
+  <div id="latestGallery" class="block-1col block-fill-even">
+    <div class="rss-header block-firm">
+      <h2>Latest Gallery Item</h2>
+      <a href="/gallery.xml" target="_blank"><i class="fa-solid fa-rss fa-xl"></i></a>
+    </div>
+    <div class="block-1col block-squishy block-spaced">
+      <div class="block-spaced block-spaced-bottom block-text-center">
+        <span><b>
+          {% if "artGallery" in latestGallery.data.tags %}Art Post:{% endif %}
+          {% if "designGallery" in latestGallery.data.tags %}Design Post:{% endif %}
+        </b></span>
+        <span><a href="{{ latestGallery.url }}">{{ latestGallery.data.title }}, ({{ latestGallery.data.date | JStoDateMed1 }})</a></span>
+      </div>
+      <div class="block-item-center block-img-scaler block-squishy ">
+        <a class="image-link" href="{{ latestGallery.url }}">
+          <img id="latestGalleryImg"
+               src="{{ latestGallery.data.gallThumbImg }}"
+               alt="{{ latestGallery.data.title }} thumbnail. Click for details.">
+        </a>
+      </div>
+    </div>
+  </div>
+  {% set latestBlog = collections.blog | last %}
+  {% set latestNote = collections.note | last %}
+  {# {{ latestBlog | log }} #}
+  {# Latest Yap #}
+  <div id="latestPosts" class="block-1col block-fill-even">
+    <div class="rss-header block-firm">
+      <h2>Latest Blog Post</h2>
+      <a href="/blog.xml" target="_blank"><i class="fa-solid fa-rss fa-xl"></i></a>
+    </div>
+    <div class="block-1col block-spaced block-squishy">
+      <div class="block-spaced block-spaced-bottom">
+        <span><a href="{{ latestBlog.url }}">
+          Blog Post:
+        {{ latestBlog.data.title }}</a></span>
+      </div>
+      <div id="latestBlogExcerpt">
+        {{ latestBlog.content | excerpt | safe | truncate(280) }}
+      </div>
+      <div id="latestBlogReadMore" class="block-text-right">
+        <span><a href="{{ latestBlog.url }}">Read More ▶▶</a></span>
+      </div>
+    </div>
+    <hr>
+    <div class="rss-header block-firm">
+      <h2>Latest Note</h2>
+      <a href="/note.xml" target="_blank"><i class="fa-solid fa-rss fa-xl"></i></a>
+    </div>
+    <div class="block-1col block-spaced block-squishy">
+      <div class="block-spaced block-spaced-bottom">
+        <span><a href="{{ latestNote.url }}">{{ latestNote.data.title }}</a></span>
+      </div>
+      <div id="latestNoteExcerpt">
+        {{ latestNote.content | safe | truncate(280) }}
+      </div>
+      <div id="latestNoteReadMore" class="block-text-right">
+        <span><a href="{{ latestNote.url }}">Read More ▶▶</a></span>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="rss-header">
   <h2>Changelog</h2>
   <a href="/changelog.xml" target="_blank"><i class="fa-solid fa-rss fa-xl"></i></a>
 </div>
-{% include "blocks/status-box.njk" %}
-<h2>Heyo!</h2>
-<p>
-  Hi, I’m Hika (they/them)! A black, queer, comic artist, graphic designer, and web designer based in the San Francisco Bay Area! I graduated with a BA in Graphic Design and have professional work experience in both graphic design and front-end web development.
-</p>
-<p>I love magical girls, the supernatural, manga, anime, video games, and my OCs.</p>
-<p>
-  The internet’s very scattered right now, so this is where I’ll keep all the Hika-essentials. For starters, you can peep my <a href="https://hikatamika.com/art-gallery/"><b>Art</b></a> or <b><a href="https://hikatamika.com/design-gallery/">Design Galleries</a></b> to see some of my visual work, the <a href="https://hikatamika.com/library/"> <b>Library</b></a> for my comics and zines, or head to the <a href="https://hikatamika.com/cinema/"> <b>Cinema</b> </a> for my art discussion and tutorial videos.
-</p>
-<p>
-  My <a href="https://hikatamika.com/my-links/"><b>My Links</b></a> page is the one with my pages on all the social media apps you love to use, but my <a href="https://hikatamika.com/links-out/"><b>Links Out</b></a> page is a huge list of useful creative resources and other artists’ websites.
-</p>
-<hr class="hr-33">
-<div class="sitebuttons sitebuttons-center">
-  {% for button in webButtons8831 %}
-    {% if buttonCateg == home %}
-      {% include "blocks/button-roll.njk" %}
-    {% endif %}
-  {% endfor %}
-</div>
-<hr class="hr-33">
+{% include "blocks/changelog-box.njk" %}
+<div id="buildDateBox" class="block-item-center">{% include "blocks/build-dates.njk" %}</div>
+<h2>Webrings</h2>
+{% include "blocks/webrings.njk" %}
 <h2>Link Back</h2>
 {% include "blocks/link-back.njk" %}

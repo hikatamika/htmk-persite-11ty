@@ -1,0 +1,11 @@
+{
+  "layout": "/layouts/main/main-gallery.njk",
+  "tags": ["artGallery", "gallery"],
+  "eleventyComputed": {
+    "gridLink": "{{ page.filePathStem }}"
+  },
+  "pageScripts": {
+    "swiper": true,
+    "photoswipe": true
+  }
+}

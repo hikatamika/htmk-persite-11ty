@@ -1,12 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HK★TMK | {{ title }}</title>
+<title>{{ title }} | HK★TMK</title>
+
+<meta name="robots" content="noai, noimageai">
 
 <meta name="description" content="{{ socCardDesc }}">
 
 <meta property="og:title" content="HK★TMK | {{ title }}">
 <meta property="og:type" content="{{ socCardType }}">
-<meta property="og:url" content="https://hikatamika.com{{ page.url }}">
+<meta property="og:url" content="https://hikatamika.com/{{ page.url }}">
 <meta property="og:image" content="{{ socCardImg }}">
 <meta property="og:image:alt" content="{{ socCardImgAlt }}">
 
@@ -19,8 +21,20 @@
 
 <link href="/src/fontawesome/css/fontawesome.min.css" rel="stylesheet" />
 <link href="/src/fontawesome/css/solid.min.css" rel="stylesheet" />
+<link href="/src/fontawesome/css/brands.min.css" rel="stylesheet" />
+
+{% if pageScripts.photoswipe %}
+  <link rel="stylesheet" href="/src/css/vendor/photoswipe.min.css">
+  <link rel="stylesheet" href="/src/css/vendor/photoswipe-dynamic-caption-plugin.min.css">
+{% endif %}
+
+{% if pageScripts.swiper %}
+  <link href="/src/swiper/swiper-bundle.min.css" rel="stylesheet" />  
+{% endif %}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+
+<script src="/src/js/luxon.min.js"></script>

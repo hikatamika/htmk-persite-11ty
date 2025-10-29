@@ -8,19 +8,23 @@ pagination:
   alias: statuses
 ---
 
-<div class="pagi-navi pagi-navi-top">{% include "blocks/pagi-navi.njk" %}</div>
-<div class="status-roll">
+<div class="pagi-navi pagi-navi-top">
+  {% include "blocks/pagi-navi-l.njk" %}
+  {% include "blocks/pagi-navi-r.njk" %}
+</div>
+<div class="status-roll block-spaced">
   {% for status in statuses | reverse %}
     <div class="status-box">
       <div class="status-icon">
-        <a href="/status" class="status-rss">
-          <img src="/src/img/hika-status.webp" alt="Hika Icon">
-        </a>
+        <img src="/src/img/hika-status.webp" alt="Hika Icon">
       </div>
       <div class="status-message">
-        <span><b>{{ status.date | JStoRelative | makeTitleCase }}:</b> {{ status.content | safe }}</span>
+        <span class="status-time"><span class="time-int-convert">{{ status.date | JStoInt }}</span>:</span>&nbsp;<span>{% if status.data.statusEmoji %}{{ status.data.statusEmoji | safe }}&nbsp;-&nbsp;{% endif %}{{ status.content | safe }}</span>
       </div>
     </div>
   {% endfor %}
 </div>
-<div class="pagi-navi pagi-navi-bottom">{% include "blocks/pagi-navi.njk" %}</div>
+<div class="pagi-navi pagi-navi-bottom">
+  {% include "blocks/pagi-navi-l.njk" %}
+  {% include "blocks/pagi-navi-r.njk" %}
+</div>

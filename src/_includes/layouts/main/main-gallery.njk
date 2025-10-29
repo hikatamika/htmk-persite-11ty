@@ -1,0 +1,125 @@
+---
+layout: /layouts/main/main.njk
+---
+<span class="heading-subtitle">{{ date | JStoYMD1 }}</span>
+
+<nav>
+</nav>
+<nav>
+  {% set firstItem = collections.artGallery | first %}
+  {% set previousItem = collections.artGallery | getPreviousCollectionItem %}
+  {% set nextItem = collections.artGallery | getNextCollectionItem %}
+  {% set lastItem = collections.artGallery | last %}
+  <div class="pagi-navi pagi-navi-top">
+    {% include "blocks/colle-navi-l.njk" %}
+    <div>
+      <ul class="section-links">
+        {# <a href="../"><li>◀◀ Back</li></a> #}
+        {% if not galleryScraps %}         
+          {% for item in galleryCategIndex.year %}
+            {% if item.categKey == galleryCategs.year %}
+              <a href="/art-gallery/{{ item.categLabel | slugify }}"><li>{{ item.categLabel }}</li></a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if not galleryScraps %}            
+          {% for item in galleryCategIndex.subject %}
+            {% if item.categKey == galleryCategs.subject %}
+              <a href="/art-gallery/{{ item.categLabel | slugify }}"><li>{{ item.categLabel }}</li></a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if not galleryScraps %}            
+          {% for item in galleryCategIndex.medium %}
+            {% if item.categKey == galleryCategs.medium %}
+              <a href="/art-gallery/{{ item.categLabel | slugify }}"><li>{{ item.categLabel }}</li></a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% if galleryScraps %}
+          <a href="/art-gallery/scraps"><li>Scraps</li></a>
+        {% endif %}
+        {# <a href="../{{ item.categLabel | slugify }}"><li>{{ galleryCategIndex.year[data.galleryCategs[0].categLabel }}</li></a>
+        <a href="../{{ item.categLabel | slugify }}"><li>{{ galleryCategIndex.subject[key].categLabel }}</li></a>
+        <a href="../{{ item.categLabel | slugify }}"><li>{{ galleryCategIndex.medium[key].categLabel }}</li></a> #}
+      </ul>
+    </div>
+    {% include "blocks/colle-navi-r.njk" %}
+  </div>
+</nav>
+<section id="galleryImgs">
+  <!-- Slider main container -->
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      {% for slide in gallerySlides %}
+        {% if slide.imgZoom %}
+          <div class="swiper-slide photoswipeable"><a class="photoswipee image-link" href="{{ slide.imgZoom }}" data-pswp-width="{{ slide.imgWidth }}" data-pswp-height="{{ slide.imgHeight }}"
+                target="_blank"><img class="gallery-img" src="{{ slide.imgThumb }}" alt="{{ slide.imgAlt }}"></a></div>
+        {% elif slide.imgVideo and slide.imgVideo.site == "youtube" %}
+          <div class="swiper-slide">
+            {% youTubeEmbed slide.imgVideo.id %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+<hr>
+<section>
+  {{ content | safe }}
+  {% include "blocks/comment-by-email.njk" %}
+  {% include "blocks/react-on-wavebox.njk" %}
+</section>
+<hr>
+<section>
+  {% if galleryWebLinks %}
+      {% linkButtonSetRow %}
+        {% for webLink in galleryWebLinks %}
+          {% gallWeblinkButton webLink.site, webLink.url %}
+        {% endfor %}
+      {% endlinkButtonSet %}
+  {% endif %}
+  {% if gallerySupportLinks %}
+      {% linkButtonSetRow %}
+        {% for supportLink in gallerySupportLinks %}
+          {% gallSupportButton supportLink.site, supportLink.label, supportLink.url %}
+        {% endfor %}
+      {% endlinkButtonSet %}
+  {% endif %}
+</section>
+<nav>
+  <div class="pagi-navi pagi-navi-bottom">
+    {% include "blocks/colle-navi-l.njk" %}
+    <div>
+      <ul class="section-links">
+        {# <a href="../"><li>◀◀ Back</li></a> #}
+        {% for item in galleryCategIndex.year %}
+          {% if item.categKey == galleryCategs[0] %}
+            <a href="/galleries/art-gallery/{{ item.categLabel | slugify }}"><li>{{ item.categLabel}}</li></a>
+          {% endif %}
+        {% endfor %}
+        {% for item in galleryCategIndex.subject %}
+          {% if item.categKey == galleryCategs[1] %}
+            <a href="/galleries/art-gallery/{{ item.categLabel | slugify }}"><li>{{ item.categLabel}}</li></a>
+          {% endif %}
+        {% endfor %}
+        {% for item in galleryCategIndex.medium %}
+          {% if item.categKey == galleryCategs[2] %}
+            <a href="/galleries/art-gallery/{{ item.categLabel | slugify }}"><li>{{ item.categLabel}}</li></a>
+          {% endif %}
+        {% endfor %}
+        {# <a href="../{{ item.categLabel | slugify }}"><li>{{ galleryCategIndex.year[data.galleryCategs[0].categLabel }}</li></a>
+        <a href="../{{ item.categLabel | slugify }}"><li>{{ galleryCategIndex.subject[key].categLabel }}</li></a>
+        <a href="../{{ item.categLabel | slugify }}"><li>{{ galleryCategIndex.medium[key].categLabel }}</li></a> #}
+      </ul>
+    </div>
+    {% include "blocks/colle-navi-r.njk" %}
+  </div>
+</nav>

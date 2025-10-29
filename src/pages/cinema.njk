@@ -1,0 +1,25 @@
+---
+layout: /layouts/main/main.njk
+title: Cinema
+sectionLinks:
+  - section: Art Tutorials
+    url: "#sec-artTutorials"
+  - section: Art Discussions
+    url: "#sec-artDiscussions"
+---
+{% set cineArtTutorial = collections.cinema | includes("data.cinemaCategs", "artTutorials") %}
+<h2 id="sec-artTutorials">Art Tutorials</h2>
+<div class="cinema-grid">
+  {% for video in cineArtTutorial | reverse %}
+    {% include "blocks/cinema-cells.njk" %}
+  {% endfor %}
+</div>
+
+{% set cineArtDiscussion = collections.cinema | includes("data.cinemaCategs", "artDiscussions") %}
+<h2 id="sec-artDiscussions">Art Discussions</h2>
+<div class="cinema-grid">
+  {% for video in cineArtDiscussion | reverse %}
+    {% include "blocks/cinema-cells.njk" %}
+  {% endfor %}
+</div>
+  

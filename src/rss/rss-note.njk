@@ -2,6 +2,9 @@
 {
   "permalink": "note.xml",
   "eleventyExcludeFromCollections": true,
+  "eleventyImport": {
+    "collections": ["note"]
+  },
   "metadata": {
     "title": "HK★TMK | Notes",
     "description": "Notes from HikaTamika.com",
@@ -17,29 +20,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
-  <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
-  <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
-  <updated>{{ collections.notes | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
+  <link href="{{ permalink | htmlBaseUrl(nameStrings.siteBaseURL) }}" rel="self" />
+  <link href="{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}notes" />
+  <updated>{{ collections.note | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>rss-note_{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
-  {%- for post in collections.notes | reverse %}
-  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset %}
+  {%- for post in collections.note | reverse %}
+  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(nameStrings.siteBaseURL) }}{% endset %}
+  {% if loop.index0 < 10 %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post.date | dateToRfc3339 }}</updated>
-    <id>{{ absolutePostUrl }}</id>
+    <id>rss-note_{{ absolutePostUrl }}_{{ post.date | JStoInt }}</id>
     <content type="html">
-      <p>{{ post.content | renderTransforms(post.data.page, metadata.base) }}</p>
+      {{ post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) }}
+      <p>
+        {% if post.data.noteSlides %}
+          {%- for slide in post.data.noteSlides -%}
+            <img src="{{ slide.img | htmlBaseUrl(nameStrings.siteBaseURL) }}" alt="{{ slide.imgAlt }}">
+          {% endfor %}
+        {% endif %}
+      </p>
       <p>
         <b>Tagged As:</b>
-        {%- for tag in post.data.noteTags %}
+        {%- for tag in post.data.noteTags -%}
           {{ tag }}{% if not loop.last %},{% endif %}
         {% endfor %}
       </p>
     </content>
   </entry>
+  {% endif %}
   {%- endfor %}
 </feed>

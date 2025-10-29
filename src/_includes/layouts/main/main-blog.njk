@@ -1,0 +1,64 @@
+---
+layout: /layouts/main/main.njk
+---
+<span class="heading-subtitle"><i class="fa-solid fa-calendar fa-fw"></i> {{ date | JStoYMD }}</span>
+{# Categories #}
+{# Tags #}
+<nav>
+  {% set firstItem = collections.blog | first %}
+  {% set previousItem = collections.blog | getPreviousCollectionItem %}
+  {% set nextItem = collections.blog | getNextCollectionItem %}
+  {% set lastItem = collections.blog | last %}
+  <div class="pagi-navi pagi-navi-top">
+    {% include "blocks/colle-navi-l.njk" %}
+    <div>
+      <ul class="section-links">
+        <a href="../"><li>◀◀ Back</li></a>
+        {% for item in blogCategIndex %}
+          {% if item.categKey in blogCategs %}
+            <a href="/blog/category/{{ item.categLabel | slugify }}"><li>{{ item.categLabel }}</li></a>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% include "blocks/colle-navi-r.njk" %}
+  </div>
+</nav>
+<section>
+  {{ content | safe }}
+</section>
+<hr class="hr-50 block-spaced-3x">
+{% include "blocks/comment-by-email.njk" %}
+{% include "blocks/react-on-wavebox.njk" %}
+{% if blogTags %}
+  <div class="blog-tag-box">
+    <div class="blog-tag-icon">
+      <i class="fa-solid fa-hashtag fa-fw fa-lg"></i>
+    </div>
+    <div class="blog-tag-roll">
+      {% for blogTag in blogTags %}
+        <a href="/blog/tagged/{{ blogTag | slugify }}">
+          <div class="tag-block">
+            <span>{{ blogTag | makeUpperFirst  }}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+<nav>
+  <div class="pagi-navi pagi-navi-bottom">
+    {% include "blocks/colle-navi-l.njk" %}
+    <div>
+      <ul class="section-links">
+        <a href="../"><li>◀◀ Back</li></a>
+        {% for item in blogCategIndex %}
+          {% if item.categKey in blogCategs %}
+            <a href="/blog/category/{{ item.categLabel | slugify }}"><li>{{ item.categLabel }}</li></a>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% include "blocks/colle-navi-r.njk" %}
+  </div>
+</nav>

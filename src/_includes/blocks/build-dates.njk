@@ -1,0 +1,3 @@
+{% set update = collections.allSorted | last %}
+<p><b>Last Updated:</b> {{ update.page.date | JStoDateTimeMed }} {{ update.page.date | JStoTimezone }}<br>
+<b>Last Compiled:</b> {{ lastBuildDate | ISOtoJSDate | JStoDateTimeMed }} {{ lastBuildDate | ISOtoJSDate | JStoTimezone }}</p>

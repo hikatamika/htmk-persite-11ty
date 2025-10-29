@@ -1,0 +1,4 @@
+<div>
+  <a href="{{ nextItem.url }}" {% if not nextItem.url or page.url == nextItem.url %}class="pagi-navi-inactive"{% endif %}><span>Next&nbsp;<i class="fa-solid fa-angle-right"></i></span></a>
+  <a href="{{ lastItem.url }}" {% if not lastItem.url or page.url == lastItem.url %}class="pagi-navi-inactive"{% endif %}><span>Last&nbsp;<i class="fa-solid fa-angles-right"></i></span></a>
+</div>

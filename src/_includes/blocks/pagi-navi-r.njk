@@ -1,0 +1,6 @@
+<div>
+  <a href="{{ pagination.href.next }}"
+     {% if not pagination.href.next %}class="pagi-navi-inactive"{% endif %}><span>Next&nbsp;<i class="fa-solid fa-angle-right"></i></span></a>
+  <a href="{{ pagination.href.last }}"
+     {% if page.url == pagination.href.last %}class="pagi-navi-inactive"{% endif %}><span>Last&nbsp;<i class="fa-solid fa-angles-right"></i></span></a>
+</div>

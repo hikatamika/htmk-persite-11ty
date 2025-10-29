@@ -1,0 +1,6 @@
+{
+  "tags": "lablogs",
+  "eleventyComputed": {
+    "title": "Dev Diary: {{ date | JStoDateTimeMed }} {{ date | JStoTimezone }}"
+  }
+}

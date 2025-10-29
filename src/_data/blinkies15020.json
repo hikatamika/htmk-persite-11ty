@@ -1,0 +1,55 @@
+{
+  "aboutMeBlinkies": [
+    {
+      "blinkieImg": "alien.gif",
+      "blinkieAlt": "alien",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "autism.gif",
+      "blinkieAlt": "autism yippee",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "queer.gif",
+      "blinkieAlt": "queer",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "nb.gif",
+      "blinkieAlt": "non-binary",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "infpt9w1.gif",
+      "blinkieAlt": "infp-t, enneagram type 9 wing 1",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "pplpleaser.gif",
+      "blinkieAlt": "people pleaser",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "screentone.gif",
+      "blinkieAlt": "screentone enjoyer",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "mg-hero.gif",
+      "blinkieAlt": "magical hero",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "shoujo.gif",
+      "blinkieAlt": "shoujo enjoyer",
+      "blinkieLink": "https://blinkies.cafe/"
+    },
+    {
+      "blinkieImg": "splatoon.gif",
+      "blinkieAlt": "splatoon squid kid",
+      "blinkieLink": "https://blinkies.cafe/",
+      "blinkieHide": true
+    }
+  ]
+}

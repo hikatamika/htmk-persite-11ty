@@ -1,0 +1,145 @@
+{
+  "year": [
+    {
+      "categKey": "2025",
+      "categLabel": "2025",
+      "categDesc": "Art from 2025."
+    },
+    {
+      "categKey": "2024",
+      "categLabel": "2024",
+      "categDesc": "Art from 2024."
+    },
+    {
+      "categKey": "2023",
+      "categLabel": "2023",
+      "categDesc": "Art from 2023."
+    },
+    {
+      "categKey": "2022",
+      "categLabel": "2022",
+      "categDesc": "Art from 2022."
+    },
+    {
+      "categKey": "2021",
+      "categLabel": "2021",
+      "categDesc": "Art from 2021."
+    },
+    {
+      "categKey": "2020",
+      "categLabel": "2020",
+      "categDesc": "Art from 2020."
+    },
+    {
+      "categKey": "2019",
+      "categLabel": "2019",
+      "categDesc": "Art from 2019."
+    },
+    {
+      "categKey": "2018",
+      "categLabel": "2018",
+      "categDesc": "Art from 2018."
+    },
+    {
+      "categKey": "2017",
+      "categLabel": "2017",
+      "categDesc": "Art from 2017."
+    },
+    {
+      "categKey": "old",
+      "categLabel": "Old",
+      "categDesc": "Art from 2012-2016."
+    }
+  ],
+  "subject": [
+    {
+      "categKey": "cyborg2535",
+      "categLabel": "Cyborg 2535",
+      "categStub": "cb2535",
+      "categDesc": "Art for my to-be-named cyberpunk project."
+    },
+    {
+      "categKey": "lxnx",
+      "categLabel": "Divine Operatives: LUX;NOX",
+      "categStub": "LXNX",
+      "categDesc": "Art for my magical girl project."
+    },
+    {
+      "categKey": "demiHumanDiaries",
+      "categLabel": "Demi-Human Diaries",
+      "categStub": "DemiHuman",
+      "categDesc": "Art for my supernatural YA/NA project."
+    },
+    {
+      "categKey": "somnius",
+      "categLabel": "Somnius: Dream Demons",
+      "categStub": "Somnius",
+      "categDesc": "Art for my mystery mini-series project."
+    },
+    {
+      "categKey": "rosamari",
+      "categLabel": "RosaMari",
+      "categDesc": "Art for alternative-historical-fiction project."
+    },
+    {
+      "categKey": "utauOC",
+      "categLabel": "UTAU OC",
+      "categDesc": "Art of my original UTAU voicebank characters."
+    },
+    {
+      "categKey": "hikaSona",
+      "categLabel": "HikaSona",
+      "categDesc": "Art of my ArtSona."
+    },
+    {
+      "categKey": "AUs",
+      "categLabel": "Alternate Universes",
+      "categStub": "AUs",
+      "categDesc": "Art of my Original Characters in non-canon Alternate Universes."
+    },
+    {
+      "categKey": "friendsOC",
+      "categLabel": "Friend's OC",
+      "categDesc": "Art of my friends' Original Characters."
+    },
+    {
+      "categKey": "fanart",
+      "categLabel": "Fanart",
+      "categDesc": "Fanart for Pop Culture and Indie Media IPs."
+    },
+    {
+      "categKey": "irlPortraits",
+      "categLabel": "IRL Portraits",
+      "categDesc": "Portraits of IRL People."
+    }
+  ],
+  "medium": [
+    {
+      "categKey": "digitalArt",
+      "categLabel": "Digital Art",
+      "categDesc": "Art drawn in digital software with graphics tablets or pen displays."
+    },
+    {
+      "categKey": "analogArt",
+      "categLabel": "Analog Art",
+      "categDesc": "Art made on paper or canvas with physical mediums."
+    },
+    {
+      "categKey": "3dArt",
+      "categLabel": "3D Art",
+      "categDesc": "Art made using 3D modeling software. In my case, typically Blender3D."
+    },
+    {
+      "categKey": "pixelArt",
+      "categLabel": "Pixel Art",
+      "categDesc": "A delightfully limited art style focusing on making big impressions with little squares and limited palettes."
+    }
+  ],
+  "scrap": [
+    {
+      "categKey": "scraps",
+      "categLabel": "Scraps",
+      "categDesc": "The doodly, the scribbly, and the sketchy. Affectionately named after the deviantArt category."
+    }
+  ]
+}

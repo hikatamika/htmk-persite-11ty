@@ -1,0 +1,554 @@
+{
+  "comicResc": [
+    {
+      "linkLabel": "Blambot Fonts",
+      "linkURL": "https://blambot.com/"
+    },
+    {
+      "linkLabel": "ComicControl CMS (Fork)",
+      "linkURL": "https://github.com/mrencyc/ComicControl"
+    },
+    {
+      "linkLabel": "ComiCraft Fonts",
+      "linkURL": "https://www.comicbookfonts.com/"
+    },
+    {
+      "linkLabel": "Comics Advocacy Group",
+      "linkURL": "https://comicsadvocacygroup.org/"
+    },
+    {
+      "linkLabel": "Grawlix Webcomic CMS",
+      "linkURL": "https://github.com/Ayemae/Grawlix-Webcomic-CMS"
+    },
+    {
+      "linkLabel": "RareBit Auto-RSS Script",
+      "linkURL": "https://mincerafter42.github.io/2023/08/17/rss-in-rarebit/"
+    },
+    {
+      "linkLabel": "RareBit HTML Comic Template",
+      "linkURL": "https://rarebit.neocities.org/"
+    },
+    {
+      "linkLabel": "Sara.Pizza (Fonts)",
+      "linkURL": "https://sara.pizza/fonts"
+    },
+    {
+      "linkLabel": "Sara.Pizza (Lettering Resources)",
+      "linkURL": "https://sara.pizza/resources"
+    },
+    {
+      "linkLabel": "Toocheke WordPress Plugin",
+      "linkURL": "https://www.toocheke.com/"
+    }
+  ],
+  "jrnlResc": [
+    {
+      "linkLabel": "Simple Bullet Journaling Tutorial (Archived)",
+      "linkURL": "https://web.archive.org/web/20220101043012/https://bulletjournal.com/pages/learn"
+    },
+    {
+      "linkLabel": "Updated Bullet Journal Rapid Logging Tutorial",
+      "linkURL": "https://bulletjournal.com/blogs/bulletjournalist/how-to-improve-focus-using-a-bullet-journal"
+    },
+    {
+      "linkLabel": "Collections: How to Make a One-Book Notebook Ecosystem",
+      "linkURL": "https://bulletjournal.com/blogs/faq/collections"
+    }
+  ],
+  "digiGardenResc": [
+    {
+      "linkLabel": "A Brief History & Ethos of the Digital Garden",
+      "linkURL": "https://maggieappleton.com/garden-history"
+    },
+    {
+      "linkLabel": "What Is A Digital Garden? 🌱 Benefits & Philosophy",
+      "linkURL": "https://www.youtube.com/watch?v=en56OKg5hyc"
+    },
+    {
+      "linkLabel": "Zettelkasten & Obsidian Workflow in 10 Minutes for Busy People",
+      "linkURL": "https://www.youtube.com/watch?v=usi0G90pIiY"
+    }
+  ],
+  "musicResc": [
+    {
+      "linkLabel": "Animal Crossing Radio",
+      "linkURL": "https://tane.us/ac/nl.html"
+    },
+    {
+      "linkLabel": "Dova Syndrome",
+      "linkURL": "https://dova-s.jp/"
+    },
+    {
+      "linkLabel": "Riot Sessions: Diana",
+      "linkURL": "https://soundcloud.com/leagueoflegends/sets/sessions-diana"
+    },
+    {
+      "linkLabel": "Riot Sessions: Star Guardian Taliyah",
+      "linkURL": "https://soundcloud.com/leagueoflegends/sets/sessions-star-guardian-taliyah"
+    },
+    {
+      "linkLabel": "Riot Sessions: Vi",
+      "linkURL": "https://soundcloud.com/leagueoflegends/sets/sessions-vi"
+    },
+    {
+      "linkLabel": "Sound Effect Lab",
+      "linkURL": "https://soundeffect-lab.info/"
+    },
+    {
+      "linkLabel": "Stream Cafe",
+      "linkURL": "https://www.youtube.com/channel/UCdpN_SlX2Ulz19C7BbBbM7w"
+    }
+  ],
+  "myLinksMicroBlogging": [
+    {
+      "linkLabel": "BlueSky",
+      "linkURL": "https://bsky.app/profile/hikatamika.com",
+      "linkEmojis": "💬⚠️"
+    },
+    {
+      "linkLabel": "Mastodon",
+      "linkURL": "https://mastoart.social/@hikatamika",
+      "linkEmojis": "🐌💤"
+    },
+    {
+      "linkLabel": "Threads",
+      "linkURL": "https://threads.net/@hikatamika",
+      "linkEmojis": "💀🤖",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "Twitter/X",
+      "linkURL": "https://x.com/HikaTamika",
+      "linkEmojis": "💀🤖",
+      "linkGrave": true
+    }
+  ],
+  "myLinksGallery": [
+    {
+      "linkLabel": "Artfol",
+      "linkURL": "https://artfol.me/hikatamika",
+      "linkEmojis": "💀🧟",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "ArtStation",
+      "linkURL": "https://www.artstation.com/hikatamika/profile",
+      "linkEmojis": "💀🤖",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "DeviantArt",
+      "linkURL": "https://www.deviantart.com/hikatamika",
+      "linkEmojis": "💀🤖",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "Foriio",
+      "linkURL": "https://www.foriio.com/hikatamika",
+      "linkEmojis": "💀",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "InkBlot",
+      "linkURL": "https://inkblot.art/profile/hikatamika",
+      "linkEmojis": "💀🧟",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "Instagram",
+      "linkURL": "https://instagram.com/HikaTamika",
+      "linkEmojis": "🙈💤🐌🤖"
+    },
+    {
+      "linkLabel": "Ko-Fi",
+      "linkURL": "https://ko-fi.com/hikatamika",
+      "linkEmojis": "🌟📨"
+    },
+    {
+      "linkLabel": "PillowFort",
+      "linkURL": "https://pillowfort.social/HikaTamika",
+      "linkEmojis": "💀🧟",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "PixelFed",
+      "linkURL": "https://pixelfed.social/HikaTamika",
+      "linkEmojis": "💀🧟",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "SheezyArt",
+      "linkURL": "https://sheezy.art/hikatamika",
+      "linkEmojis": "🌟"
+    },
+    {
+      "linkLabel": "ToyHouse",
+      "linkURL": "https://toyhou.se/HikaTamika",
+      "linkEmojis": "💀🧟",
+      "linkGrave": true
+    }
+  ],
+  "myLinksSocialBlogging": [
+    {
+      "linkLabel": "Tumblr (Main)",
+      "linkURL": "https://hikatamika.tumblr.com/",
+      "linkEmojis": "💀🧟",
+      "linkGrave": true
+    },
+    {
+      "linkLabel": "CoHost",
+      "linkURL": "https://cohost.org/hikatamika",
+      "linkEmojis": "🪦",
+      "linkGrave": true
+    }
+  ],
+  "myLinksVideo": [
+    {
+      "linkLabel": "TikTok",
+      "linkURL": "https://tiktok.com/@hikatamika",
+      "linkEmojis": "⚠️🐌💤"
+    },
+    {
+      "linkLabel": "Twitch",
+      "linkURL": "https://twitch.tv/HikaTamika",
+      "linkEmojis": "🌟🐌💤"
+    },
+    {
+      "linkLabel": "YouTube",
+      "linkURL": "https://youtube.com/@HikaTamika",
+      "linkEmojis": "🌟🐌💤"
+    }
+  ],
+  "myLinksOther": [
+    {
+      "linkLabel": "AniList",
+      "linkURL": "https://anilist.co/user/hikatamika/",
+      "linkEmojis": "💤"
+    },
+    {
+      "linkLabel": "WaveBox",
+      "linkURL": "https://wavebox.me/wave/9zdpazgbm43lecc5/",
+      "linkEmojis": "🌟"
+    }
+  ],
+  "otherCreativeResc": [
+    {
+      "linkLabel": "3D Anatomy Reference",
+      "linkURL": "https://ref.anatomy4sculptors.com/"
+    },
+    {
+      "linkLabel": "Artist Alley Network",
+      "linkURL": "https://artistalleynetwork.carrd.co/"
+    },
+    {
+      "linkLabel": "Aspect Ratio Calculator",
+      "linkURL": "https://andrew.hedges.name/experiments/aspect_ratio/"
+    },
+    {
+      "linkLabel": "Comparing Heights",
+      "linkURL": "https://www.mrinitialman.com/OddsEnds/Sizes/compsizes.xhtml"
+    },
+    {
+      "linkLabel": "Glaze",
+      "linkURL": "https://glaze.cs.uchicago.edu/"
+    },
+    {
+      "linkLabel": "Height Comparison",
+      "linkURL": "https://www.heightcomparison.com/"
+    },
+    {
+      "linkLabel": "Human Proportions Calculator",
+      "linkURL": "https://hpc.anatomy4sculptors.com/"
+    },
+    {
+      "linkLabel": "ManicTime",
+      "linkURL": "https://www.manictime.com/"
+    },
+    {
+      "linkLabel": "Nightshade",
+      "linkURL": "https://nightshade.cs.uchicago.edu/"
+    },
+    {
+      "linkLabel": "Old School PC Fonts",
+      "linkURL": "https://int10h.org/oldschool-pc-fonts/fontlist/"
+    },
+    {
+      "linkLabel": "PomoFarm",
+      "linkURL": "https://wormpod.itch.io/pomofarm"
+    },
+    {
+      "linkLabel": "PostyBirb",
+      "linkURL": "https://www.postybirb.com/"
+    },
+    {
+      "linkLabel": "PureRef",
+      "linkURL": "https://www.pureref.com/"
+    },
+    {
+      "linkLabel": "StimuWrite",
+      "linkURL": "https://thatclowngoddess.itch.io/stimuwrite"
+    }
+  ],
+  "otherResc": [
+    {
+      "linkLabel": "Sad Bastard Cookbook",
+      "linkURL": "https://traumbooks.itch.io/the-sad-bastard-cookbook"
+    },
+    {
+      "linkLabel": "Stop Payment Processors",
+      "linkURL": "https://stop-paypros.neocities.org/"
+    },
+    {
+      "linkLabel": "YellAt.Money",
+      "linkURL": "https://yellat.money/"
+    }
+  ],
+  "perSites": [
+    {
+      "linkLabel": "BrutalMoose",
+      "linkURL": "https://brutalmoose.com/"
+    },
+    {
+      "linkLabel": "Cola Canvas (TeniCola)",
+      "linkURL": "https://colacanvas.com/"
+    },
+    {
+      "linkLabel": "JustSnooze",
+      "linkURL": "https://justsnooze.neocities.org/"
+    },
+    {
+      "linkLabel": "LUV3RB01",
+      "linkURL": "https://luv3rb01.neocities.org/"
+    },
+    {
+      "linkLabel": "Milk ✦ Circus",
+      "linkURL": "https://milkcircus.com/"
+    },
+    {
+      "linkLabel": "Rkrn.me",
+      "linkURL": "https://rkrn.me/"
+    },
+    {
+      "linkLabel": "RU XU",
+      "linkURL": "https://ruemxu.com/"
+    },
+    {
+      "linkLabel": "Slyllama",
+      "linkURL": "https://www.slyllama.net/alec/"
+    }
+  ],
+  "perspDraw": [
+    {
+      "linkLabel": "Drawsh – Linear Perspective",
+      "linkURL": "https://www.youtube.com/playlist?list=PLhSP4Pnh5qmo9R-94G--Oeyk-QgMHfKaF"
+    },
+    {
+      "linkLabel": "How to Draw Backgrounds with Character",
+      "linkURL": "https://storydrawingskills.gumroad.com/l/tTiRg"
+    },
+    {
+      "linkLabel": "Perspective Made Easy",
+      "linkURL": "https://www.youtube.com/playlist?list=PLo1VedDKcADlXsAjn_ZpUpcdPytwiIBn2"
+    },
+    {
+      "linkLabel": "What is Perspective/Vanishing Points?",
+      "linkURL": "https://www.youtube.com/watch?v=YDanHdjPJVs"
+    }
+  ],
+  "portfolios": [
+    {
+      "linkLabel": "DearStrayGhost",
+      "linkURL": "https://dearstrayghost.weebly.com/"
+    },
+    {
+      "linkLabel": "Exit Reality",
+      "linkURL": "https://exitrealitystudios.com/",
+      "linkIsNSFW": true
+    },
+    {
+      "linkLabel": "Lorenzo Hall",
+      "linkURL": "https://lorenzohall.com/"
+    },
+    {
+      "linkLabel": "Setenza",
+      "linkURL": "https://setenza.art/"
+    },
+    {
+      "linkLabel": "Vicky Cordova",
+      "linkURL": "https://www.vickycordova.com/"
+    }
+  ],
+  "webcomiOngoing": [
+    {
+      "linkLabel": "A.C.E. of C.A.R.D.S.",
+      "linkURL": "https://www.aceofcardsmanga.com/"
+    },
+    {
+      "linkLabel": "Bad Influence",
+      "linkURL": "https://badinfluencecomic.com/"
+    },
+    {
+      "linkLabel": "Cirque Royale",
+      "linkURL": "https://www.cirqueroyalecomic.com/"
+    },
+    {
+      "linkLabel": "Countdown to Countdown",
+      "linkURL": "https://www.ctccomic.com/"
+    },
+    {
+      "linkLabel": "Devil’s Candy",
+      "linkURL": "https://www.devilscandycomic.com/"
+    },
+    {
+      "linkLabel": "Glitter and Guilt",
+      "linkURL": "https://peony.webcomic.ws/",
+      "linkIsNSFW": true
+    },
+    {
+      "linkLabel": "Laika’s Comet",
+      "linkURL": "https://laikascomet.the-comic.org/"
+    },
+    {
+      "linkLabel": "Peony",
+      "linkURL": "https://peony.webcomic.ws/"
+    },
+    {
+      "linkLabel": "Serendipity",
+      "linkURL": "https://www.webtoons.com/en/canvas/serendipity-/list?title_no=575989"
+    },
+    {
+      "linkLabel": "Solomon's Ledger",
+      "linkURL": "https://www.webtoons.com/en/canvas/solomons-ledger/list?title_no=999198"
+    },
+    {
+      "linkLabel": "Sun Princess",
+      "linkURL": "https://tapas.io/series/Sun-Princess/info"
+    }
+  ],
+  "webcomiComplete": [
+    {
+      "linkLabel": "Miss Atom",
+      "linkURL": "https://www.webtoons.com/en/canvas/miss-atom/list?title_no=961827"
+    }
+  ],
+  "webcomiHiatus": [
+    {
+      "linkLabel": "GLiTCH",
+      "linkURL": "https://www.webtoons.com/en/canvas/glitch/list?title_no=39322"
+    },
+    {
+      "linkLabel": "Sleepless Domain",
+      "linkURL": "https://www.sleeplessdomain.com/"
+    },
+    {
+      "linkLabel": "Space Boy",
+      "linkURL": "https://www.webtoons.com/en/sf/space-boy/list?title_no=400"
+    },
+    {
+      "linkLabel": "Star Rangers",
+      "linkURL": "https://www.webtoons.com/en/canvas/star-rangers-magical-space-cadet-squad/list?title_no=487760"
+    }
+  ],
+  "webcomiGroup": [
+    {
+      "linkLabel": "Big Clout Comics",
+      "linkURL": "https://bigcloutcomics.com/"
+    }
+  ],
+  "webfiction": [
+    {
+      "linkLabel": "Restart by Eicaxy and Juniiie",
+      "linkURL": "https://toyhou.se/~literature/268494.restart"
+    }
+  ],
+  "webRescSite": [
+    {
+      "linkLabel": "Anti-Scrape Robots.txt",
+      "linkURL": "https://github.com/ai-robots-txt/ai.robots.txt"
+    },
+    {
+      "linkLabel": "Eleventy",
+      "linkURL": "https://www.11ty.dev/"
+    },
+    {
+      "linkLabel": "How to block AI Crawler Bots using robots.txt file",
+      "linkURL": "https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/"
+    },
+    {
+      "linkLabel": "SadGrl’s Static Website Layout Builder",
+      "linkURL": "https://goblin-heart.net/sadgrl/projects/layout-builder/"
+    },
+    {
+      "linkLabel": "Shimmie 2",
+      "linkURL": "https://code.shishnet.org/shimmie2/"
+    },
+    {
+      "linkLabel": "Status.cafe",
+      "linkURL": "https://status.cafe/"
+    },
+    {
+      "linkLabel": "Using RSS on a static website",
+      "linkURL": "https://goblin-heart.net/sadgrl/learn/articles/static-rss"
+    },
+    {
+      "linkLabel": "Writing Alt-Text",
+      "linkURL": "https://www.perkins.org/resource/how-write-alt-text-and-image-descriptions-visually-impaired/"
+    },
+    {
+      "linkLabel": "𝕐: What Comes After 𝕏?",
+      "linkURL": "https://y-after.social/"
+    }
+  ],
+  "webRescUnplug": [
+    {
+      "linkLabel": "Break up with your 𝕏",
+      "linkURL": "https://boringstorybook.com/break-up-with-your-x/"
+    },
+    {
+      "linkLabel": "De-Arrow",
+      "linkURL": "https://dearrow.ajay.app/"
+    },
+    {
+      "linkLabel": "NoSurf",
+      "linkURL": "https://nosurf.net/"
+    },
+    {
+      "linkLabel": "SponsorBlock",
+      "linkURL": "https://sponsor.ajay.app/"
+    },
+    {
+      "linkLabel": "StayFocusd",
+      "linkURL": "https://www.stayfocusd.com/"
+    },
+    {
+      "linkLabel": "UnTrap for YouTube",
+      "linkURL": "https://untrap.app/"
+    }
+  ],
+  "writingBooks": [
+    {
+      "linkLabel": "Save the Cat Writes a Novel",
+      "linkURL": "https://savethecat.com/products/books/save-the-cat-writes-a-novel"
+    },
+    {
+      "linkLabel": "Story Genius",
+      "linkURL": "http://wiredforstory.com/story-genius-1"
+    }
+  ],
+  "writingSoft":  [
+    {
+      "linkLabel": "Aeon Timeline",
+      "linkURL": "https://www.aeontimeline.com/"
+    },
+    {
+      "linkLabel": "Scrivener",
+      "linkURL": "https://www.literatureandlatte.com/scrivener/overview"
+    }
+  ],
+  "yourWebrings": [
+    {
+      "linkLabel": "Squid Ring",
+      "linkURL": "https://squidknees.net/squidring"
+    }
+  ]
+}

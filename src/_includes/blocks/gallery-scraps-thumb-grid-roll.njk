@@ -1,0 +1,10 @@
+{% set categCollection = collections.artGallery | includes("data.galleryScraps", true) | reverse %}
+{% for item in categCollection %}
+  {# {{ categCollection | log }}  #}
+  <div class="gallery-thumb-grid-item">
+    <a href="{{ item.page.url }}">
+      <img src="{{ item.data.gallThumbImg }}"
+           alt="{{ item.data.title }} thumbnail. Click for details.">
+    </a>
+  </div>
+{% endfor %}

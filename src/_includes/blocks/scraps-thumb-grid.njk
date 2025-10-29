@@ -1,0 +1,18 @@
+{% set scrapsCollection = collections.artGallery | includes("data.galleryScraps", true) | last %}
+<div class="gallery-categ-box">
+  <a href="{{ galleryCategIndex.scrap[loop.index0].categLabel | slugify }}">
+    <div class="gallery-categ-label">
+      <span>
+        {% if galleryCategIndex.scrap[loop.index0].categStub %}
+          {{ galleryCategIndex.scrap[loop.index0].categStub }}
+        {% else %}
+          {{ galleryCategIndex.scrap[loop.index0].categLabel }}
+        {% endif %}
+      </span>
+    </div>
+    <img src="{{ scrapsCollection.data.gallThumbImg }}"
+         alt="'{{ galleryCategIndex.scrap[loop.index0].categLabel }}' Category Thumbnail"
+         class="gallery-categ-img"
+         style="object-position:{{ scrapsCollection.data.gallThumbFocus }}">
+  </a>
+</div>

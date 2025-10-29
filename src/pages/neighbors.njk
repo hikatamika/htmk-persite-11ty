@@ -1,0 +1,285 @@
+---
+layout: /layouts/main/main.njk
+title: "Neighbors"
+sectionLinks:
+  - section: Other Creatives’ Links
+    url: "#sec-artistSites"
+  - section: "Webcomics"
+    url: "#sec-webcomic"
+  - section: WebFiction
+    url: "#sec-webFiction"
+  - section: Webrings
+    url: "#sec-webrings"
+  - section: Link Back
+    url: "#sec-linkBack"
+---
+<p>
+  Sites marked as 🔞 are either SFW but intended for a mature/adult audience, or NSFW. <br>
+  Even on unmarked sites, check for provided age-ratings or censorship pandas.
+</p>
+<p>Browse safely!</p>
+
+
+<h2 id="sec-artistSites">Other Creatives’ Links</h2>
+{% miniNav %}
+{% miniNavItem "Personal Sites", "#sec-persite" %}
+{% miniNavItem "Portfolios", "#sec-portfolio" %}
+{% endminiNav %}
+
+<h3 id="sec-persite">Personal Sites</h3>
+{% if webButtons8831.perSites %}
+  {% buttonRollCenter %}
+    {% for button in webButtons8831.perSites %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons20040.perSites %}
+  {% buttonRollCenter %}
+    {% for button in webButtons20040.perSites %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons46860.perSites %}
+  {% buttonRollCenter %}
+    {% for button in webButtons46860.perSites %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if textLinks.perSites %}
+  {% linkRollCenter %}
+    {% for link in textLinks.perSites %}
+      {% include "blocks/link-roll.njk" %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+
+<h3 id="sec-portfolio">Portfolios</h3>
+{% if webButtons8831.portfolios %}
+  {% buttonRollCenter %}
+    {% for button in webButtons8831.portfolios %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons20040.portfolios %}
+  {% buttonRollCenter %}
+    {% for button in webButtons20040.portfolios %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons46860.portfolios %}
+  {% buttonRollCenter %}
+    {% for button in webButtons46860.portfolios %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if textLinks.portfolios %}
+  {% linkRollCenter %}
+    {% for link in textLinks.portfolios %}
+      {% include "blocks/link-roll.njk" %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+
+<h2 id="sec-webcomic">Webcomics</h2>
+{% miniNav %}
+{% miniNavItem "Ongoing", "#sec-webcomicOngoing" %}
+{% miniNavItem "Completed", "#sec-webcomicComplete" %}
+{% miniNavItem "Hiatus", "#sec-webcomicHiatus" %}
+{% miniNavItem "Webcomic Collectives", "#sec-webcomicCollectives" %}
+{% endminiNav %}
+
+<h3 id="sec-webcomicOngoing">Ongoing</h3>
+{% if webButtons8831.webcomiOngoing %}
+  {% buttonRollCenter %}
+    {% for button in webButtons8831.webcomiOngoing %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons20040.webcomiOngoing %}
+  {% buttonRollCenter %}
+    {% for button in webButtons20040.webcomiOngoing %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons46860.webcomiOngoing %}
+  {% buttonRollCenter %}
+    {% for button in webButtons46860.webcomiOngoing %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if textLinks.webcomiOngoing %}
+  {% linkRollCenter %}
+    {% for link in textLinks.webcomiOngoing %}
+      {% include "blocks/link-roll.njk" %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+
+<h3 id="sec-webcomicComplete">Completed</h3>
+{% if webButtons8831.webcomiComplete %}
+  {% buttonRoll %}
+    {% for button in webButtons8831.webcomiComplete %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if webButtons20040.webcomiComplete %}
+  {% buttonRoll %}
+    {% for button in webButtons20040.webcomiComplete %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if webButtons46860.webcomiComplete %}
+  {% buttonRoll %}
+    {% for button in webButtons46860.webcomiComplete %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if textLinks.webcomiComplete %}
+  {% linkRoll %}
+    {% for link in textLinks.webcomiComplete %}
+      {% include "blocks/link-roll.njk" %}
+    {% endfor %}
+  {% endlinkRoll %}
+{% endif %}
+
+<h3 id="sec-webcomicHiatus">Hiatus</h3>
+{% if webButtons8831.webcomiHiatus %}
+  {% buttonRollCenter %}
+    {% for button in webButtons8831.webcomiHiatus %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons20040.webcomiHiatus %}
+  {% buttonRollCenter %}
+    {% for button in webButtons20040.webcomiHiatus %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if webButtons46860.webcomiHiatus %}
+  {% buttonRollCenter %}
+    {% for button in webButtons46860.webcomiHiatus %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRollCenter %}
+{% endif %}
+{% if textLinks.webcomiHiatus %}
+  {% linkRollCenter %}
+    {% for link in textLinks.webcomiHiatus %}
+      {% include "blocks/link-roll.njk" %}
+    {% endfor %}
+  {% endlinkRollCenter %}
+{% endif %}
+
+<h3 id="sec-webcomicCollectives">Webcomic Groups, Collectives, &amp; Webrings</h3>
+{% if webButtons8831.webcomiGroup %}
+  {% buttonRoll %}
+    {% for button in webButtons8831.webcomiGroup %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if webButtons20040.webcomiGroup %}
+  {% buttonRoll %}
+    {% for button in webButtons20040.webcomiGroup %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if webButtons46860.webcomiGroup %}
+  {% buttonRoll %}
+    {% for button in webButtons46860.webcomiGroup %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if textLinks.webcomiGroup %}
+  {% linkRoll %}
+    {% for link in textLinks.webcomiGroup %}
+      {% include "blocks/link-roll.njk" %}
+    {% endfor %}
+  {% endlinkRoll %}
+{% endif %}
+
+<h2 id="sec-webFiction">WebFiction</h2>
+{% if webButtons8831.webfiction %}
+  {% buttonRoll %}
+    {% for button in webButtons8831.webfiction %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if webButtons20040.webfiction %}
+  {% buttonRoll %}
+    {% for button in webButtons20040.webfiction %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if webButtons46860.webfiction %}
+  {% buttonRoll %}
+    {% for button in webButtons46860.webfiction %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if textLinks.webfiction %}
+  {% linkRoll %}
+    {% for link in textLinks.webfiction %}
+      {% include "blocks/link-roll.njk" %}
+    {% endfor %}
+  {% endlinkRoll %}
+{% endif %}
+
+<h2 id="sec-webrings">Webrings</h2>
+{% miniNav %}
+{% miniNavItem "Webrings I'm In", "#sec-myWebrings" %}
+{% miniNavItem "Webrings I Like", "#sec-yourWebrings" %}
+{% endminiNav %}
+<h3 id="sec-myWebrings">Webrings I'm In</h3>
+{% include "blocks/webrings.njk" %}
+
+<h3 id="sec-yourWebrings">Webrings I Like</h3>
+{% if webButtons8831.yourWebrings %}
+  {% buttonRoll %}
+    {% for button in webButtons8831.yourWebrings %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if webButtons20040.yourWebrings %}
+  {% buttonRoll %}
+    {% for button in webButtons20040.yourWebrings %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if webButtons46860.yourWebrings %}
+  {% buttonRoll %}
+    {% for button in webButtons46860.yourWebrings %}
+      {% include "blocks/button-roll.njk" %}
+    {% endfor %}
+  {% endbuttonRoll %}
+{% endif %}
+{% if textLinks.yourWebrings %}
+  {% linkRoll %}
+    {% for link in textLinks.yourWebrings %}
+      {% include "blocks/link-roll.njk" %}
+    {% endfor %}
+  {% endlinkRoll %}
+{% endif %}
+<h2 id="sec-linkBack">Link Back</h2>
+{% include "blocks/link-back.njk" %}

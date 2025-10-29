@@ -2,6 +2,9 @@
 {
   "permalink": "feed.xml",
   "eleventyExcludeFromCollections": true,
+  "eleventyImport": {
+    "collections": ["allSorted","blog"]
+  },
   "metadata": {
     "title": "HK★TMK",
     "description": "All content updates from HikaTamika.com",
@@ -17,53 +20,90 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
 <title>{{ metadata.title }}</title>
 <subtitle>{{ metadata.description }}</subtitle>
-<link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
-<link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
-<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-<id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
+<link href="{{ permalink | htmlBaseUrl(nameStrings.siteBaseURL) }}" rel="self" />
+<link href="{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}" />
+<updated>{{ collections.allSorted | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+<id>rss-all_{{ nameStrings.siteBaseURL | addPathPrefixToFullUrl }}</id>
 <author>
 <name>{{ metadata.author.name }}</name>
 </author>
 {%- for post in collections.allSorted | reverse -%}
   {%- set absolutePostUrl -%}
-    {%- if post.permalink -%}
-      {{- post.url | htmlBaseUrl(metadata.base) -}}
-    {%- elif post.data.tags == "statuses" -%}
-      {{ metadata.base }}status/
+    {%- if post.data.tags == "statuses" -%}
+      {{ nameStrings.siteBaseURL }}status/
     {%- elif post.data.tags == "changelogs" -%}
-      {{ metadata.base }}
-    {%- elif post.data.tags == "page" -%}
-      {{ post.url | htmlBaseUrl(metadata.base) }}
+      {{ nameStrings.siteBaseURL }}
+    {%- elif post.data.tags == "lablogs" -%}
+      {{ nameStrings.siteBaseURL }}the-lab/
     {%- else -%}
-      {{ post.url | htmlBaseUrl(metadata.base) }}
+      {{- post.url | htmlBaseUrl(nameStrings.siteBaseURL) -}}
     {%- endif -%}
   {%- endset -%}
-  <entry>
-  <title>
-    {%- if post.data.tags == "page" -%}
-      Page Updated: {{ post.data.title -}}
-    {%- else -%}
+    {% if loop.index0 < 15 %}
+    <entry>
+    <title>
       {{- post.data.title -}}
-    {%- endif -%}
-  </title>
-  <link href="{{ absolutePostUrl }}" />
-  <updated>{{ post.date | dateToRfc3339 }}</updated>
-  <id>{{- absolutePostUrl -}}</id>
-  <content type="html">
-    {%- if post.data.tags == "page" -%}
-      <a href="{{- absolutePostUrl -}}"><b>Page Updated! Click to view.</b></a>
-    {%- elif post.data.tags == "notes" -%}
-      <p>{{ post.content | renderTransforms(post.data.page, metadata.base) }}</p>
-      <p>
-        <b>Tagged As:</b>
-        {%- for tag in post.data.noteTags %}
-          {{ tag }}{% if not loop.last %},{% endif %}
-        {% endfor %}
-      </p>
-    {%- else -%}
-      {{- post.content | renderTransforms(post.data.page, metadata.base) -}}
-    {%- endif -%}
-  </content>
-  </entry>
+    </title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>rss-all_{{- absolutePostUrl -}}_{{ post.date | JStoInt }}</id>
+{# {{ post.data.title | log }}
+{{ post.data.tags | log }} #}
+    <content type="html">
+      {% if 'blog' in post.data.tags %}
+        {{ post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) }}
+        <p>
+          <b>Categorized Under:</b>
+          {%- for categ in post.data.blogCategs %}
+            {{ categ }}{% if not loop.last %},{% endif %}
+          {% endfor %}
+          <b>Tagged As:</b>
+          {%- for tag in post.data.blogTags %}
+            {{ tag }}{% if not loop.last %},{% endif %}
+          {% endfor %}
+        </p>
+      {% elif 'note' in post.data.tags %}
+        {{ post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) }}
+        <p>
+          {%- for slide in post.data.noteSlides -%}
+            <img src="{{ slide.img | htmlBaseUrl(nameStrings.siteBaseURL) }}" alt="{{ slide.imgAlt }}">
+          {% endfor %}
+        </p>
+        <p>
+          <b>Tagged As:</b>
+          {%- for tag in post.data.noteTags %}
+            {{ tag }}{% if not loop.last %},{% endif %}
+          {% endfor %}
+        </p>
+      {% elif 'gallery' in post.data.tags %}
+        <a href="{{ absolutePostUrl }}"><p><b>New Gallery Upload:</b> {{ post.data.title }}</p></a>
+        <img src="{{ post.data.gallThumbImg | htmlBaseUrl(nameStrings.siteBaseURL) }}" alt="{{ post.data.gallThumbAlt }}" style="max-width: 100%; height: auto;"/>
+        {# {{ post.data.gallThumbImg | log }} #}
+        <p>
+          <b>Categorized Under:</b>
+          {%- for categ in post.data.galleryCategs -%}
+            {{ categ }}{% if not loop.last %},{% endif %}
+          {% endfor %}
+        </p>
+      {% elif 'page' in post.data.tags %}
+        <a href="{{ absolutePostUrl }}"><p>Page added! Click to view.</p></a>
+      {% elif 'statuses' in post.data.tags %}
+        {{- post.data.statusEmoji }}&#160;–&#160;{{- post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) -}}
+      {% elif 'changelogs' in post.data.tags %}
+        {{- post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) -}}
+        {% if post.data.changelogLink %}        
+          <p><b><a href="{{ nameStrings.siteBaseURL.slice(0, -1) }}{{ post.data.changelogLink }}">Click here to see what updated!</a></b></p>
+        {% endif %}
+      {% elif 'lablogs' in post.data.tags %}
+        {{- post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) -}}
+        {% if post.data.changelogLink %}        
+          <p><b><a href="{{ nameStrings.siteBaseURL.slice(0, -1) }}{{ post.data.changelogLink }}">Click here to see what updated!</a></b></p>
+        {% endif %}
+      {%- else -%}
+        {{- post.content | renderTransforms(post.data.page, nameStrings.siteBaseURL) -}}
+      {%- endif -%}
+    </content>
+    </entry>
+    {% endif %}
 {%- endfor -%}
 </feed>

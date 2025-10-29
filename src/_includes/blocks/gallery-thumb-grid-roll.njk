@@ -1,0 +1,11 @@
+{% for item in categCollection %}
+  {% if not item.data.galleryScraps %}
+    {# {{ categCollection | log }}  #}
+    <div class="gallery-thumb-grid-item">
+      <a href="{{ item.page.url }}">
+        <img src="{{ item.data.gallThumbImg }}"
+             alt="{{ item.data.title }} thumbnail. Click for details.">
+      </a>
+    </div>
+  {% endif %}
+{% endfor %}

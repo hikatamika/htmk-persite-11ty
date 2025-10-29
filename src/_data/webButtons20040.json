@@ -1,0 +1,28 @@
+{
+  "comicRes": [
+    {
+      "buttonImg": "comics-devices.png",
+      "buttonAlt": "Comics Devices",
+      "buttonLink": "https://comicsdevices.com/"
+    },
+    {
+      "buttonImg": "shooting-stars.png",
+      "buttonAlt": "Shooting Stars",
+      "buttonLink": "https://shooting-stars.org/"
+    }
+  ],
+  "perSites": [
+    {
+      "buttonImg": "jrs1.png",
+      "buttonAlt": "jadine rhine studios",
+      "buttonLink": "https://jadinerhinestudios.com/index2"
+    }
+  ],
+  "webcomiGroup": [
+    {
+      "buttonImg": "aradiacollective.png",
+      "buttonAlt": "aradia collective",
+      "buttonLink": "https://aradiacollective.com/"
+    }
+  ]
+}

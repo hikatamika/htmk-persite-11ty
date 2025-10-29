@@ -8,7 +8,7 @@
     <div id="navModal" class="nav-modal">
       <div id="navModalBody" class="fadeable">
         <button id="mobileNavClose" class="button-hide">
-          <i class="fa-solid fa-xmark fa-fw"></i>
+          <i class="fa-solid fa-xmark fa-fw fa-xl"></i>
           <span class="visually-hidden">Close</span>
         </button>
         <nav id="mobileNav" class="mobile-nav">
@@ -26,14 +26,27 @@
     </header>
     <div id="siteBox">
       <div class="rss-header">
-        <h1>{{ title | makeTitleCase }}</h1>
+        {% if sectionLinks %}
+          <div>
+            <nav>
+              <ul class="section-links">
+                {% for link in sectionLinks %}
+                  <a href="{{ sectionLinkBase }}{{ link.url }}">
+                    <li>{{ link.section }}</li>
+                  </a>
+                {% endfor %}
+              </ul>
+            </nav>
+          </div>
+        {% endif %}
+        <h1>{{ title | makeStartCase }}</h1>
         <a href="{{ rssLink }}" target="_blank"><i class="fa-solid fa-rss fa-2xl"></i></a>
       </div>
-      {{ content | safe }}
+      <main>{{ content | safe }}</main>
     </div>
     <footer>
       {% include "layouts/footer-copyright.njk" %}
     </footer>
-    <script src="/src/js/app.min.js"></script>
+    {% include "layouts/scripts.njk" %}
   </body>
 </html>

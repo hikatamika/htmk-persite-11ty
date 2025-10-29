@@ -1,0 +1,10 @@
+<div>
+  <nav>
+    <ul class="section-links">
+      <a href="../"><li>◀◀ Back</li></a>
+      {% for categSlice in categPagi %}
+        <a href="../{{ categSlice.categLabel | slugify }}"><li>{{ categSlice.categLabel }}</li></a>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
